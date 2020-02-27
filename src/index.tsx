@@ -1,12 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import Header from "./components/Header"
-import { Hello } from "./components/Hello";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 ReactDOM.render(
     <>
-    <Hello compiler="TypeScript" framework="React" />
-    <Header/></>,
-    document.getElementById("example")
+    <Header/>
+    <Footer/></>,
+    document.getElementById("root")
 );
