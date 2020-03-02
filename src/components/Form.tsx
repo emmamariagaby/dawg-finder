@@ -10,11 +10,11 @@ class Form extends React.Component {
         <div className="form-wrapper">
           <form onSubmit={this.handleSubmit}>
             <label htmlFor="A">Val A</label>
-            <input type="radio" name="A" />
+            <input type="radio" name="test" value="value 1"/>
             <label htmlFor="B">Val B</label>
-            <input type="radio" name="B" />
+            <input type="radio" name="test" value="value 2"/>
             <label htmlFor="C">Val C</label>
-            <input type="radio" name="C" /> 
+            <input type="radio" name="test" value="value 3"/> 
           </form>
           {/* <button className="toggle-prev" onClick={this.togglePrev}>Previous</button> */}
           {/* <button className="toggle-next" onClick={this.toggleNext}>Next</button> */}
