@@ -1,6 +1,5 @@
 import * as React from "react";
 
-
 interface DogImageProps {
   source: string
 }
@@ -41,7 +40,7 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
       .then(data => {
         return (
           this.setState({ 
-            imageURL: data.corgi[this.getRandomNum(data..length)] 
+            imageURL: data.corgi[this.getRandomNum(data.corgi.length)] 
           })
         )
       })
