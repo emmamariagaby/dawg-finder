@@ -1,0 +1,7 @@
+{
+    "corgi": [
+        "./src/assets/images/dog1.jpg",
+        "./src/assets/images/dog2.jpg",
+        "./src/assets/images/dog3.jpg"
+    ]
+}
