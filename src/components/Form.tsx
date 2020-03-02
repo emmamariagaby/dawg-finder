@@ -29,8 +29,17 @@ class Form extends React.Component {
     }
 ];
 
+  handleSaveValue() {
+    var answ1 = document.querySelector('input[name="group"]:checked').value;
+
+    if (answ1.value == 1){
+          answ1.setAttribute("checked","checked");
+          answ1.checked = true;
+    }
+    }
+
   handleSubmit() {
-    // spara value
+    // hantera submit all values 
   }
 
   handleTogglePrev() {
