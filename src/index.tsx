@@ -22,7 +22,7 @@ ReactDOM.render(
     <Container/>
     <DogText/>
     <DogInfo/>
-    <DogImage/>
+    <DogImage source="./src/assets/images/dog2.jpg"/>
     <Footer/></>,
     document.getElementById("root")
 );
