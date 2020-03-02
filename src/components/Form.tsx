@@ -1,33 +1,46 @@
 import * as React from "react";
 
-import Button from "./Button";
+class Form extends React.Component {
+   // togglePrev: ((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined;
+    //toggleNext: ((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined;
 
-export interface FormProps {
-  question: number
-}
-
-class Form extends React.Component<FormProps, {}> {
   render() {
     return (
       <div className="wrapper">
         <div className="form-wrapper">
           <form onSubmit={this.handleSubmit}>
-            <label htmlFor="questionOne">Val 1</label>
-            <input type="radio" name="questionOne" />
-            <label htmlFor="B">Val 2</label>
+            <label htmlFor="A">Val A</label>
+            <input type="radio" name="A" />
+            <label htmlFor="B">Val B</label>
             <input type="radio" name="B" />
-            <label htmlFor="C">Val 3</label>
-            <input type="radio" name="C" />
+            <label htmlFor="C">Val C</label>
+            <input type="radio" name="C" /> 
           </form>
-          <button>Previous</button>
-          <button>Next</button>
+          {/* <button className="toggle-prev" onClick={this.togglePrev}>Previous</button> */}
+          {/* <button className="toggle-next" onClick={this.toggleNext}>Next</button> */}
         </div>
       </div>
     );
   }
 
+   data = [
+    {
+     
+    }
+];
+
   handleSubmit() {
     // spara value
+  }
+
+  handleTogglePrev() {
+      console.log("something worked toggle prev");
+      // gå till nästa fråga
+  }
+
+  handleToggleNext() {
+      console.log("something worked toggle next");
+      // gå tillbaka till fråga
   }
 }
 
