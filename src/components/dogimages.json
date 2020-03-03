@@ -1,7 +1,21 @@
 {
-    "corgi": [
-        "./src/assets/images/dog1.jpg",
-        "./src/assets/images/dog2.jpg",
-        "./src/assets/images/dog3.jpg"
-    ]
+    "sällskap": {
+        "pug": [
+            "./src/assets/images/pug/pug1.jpg",
+            "./src/assets/images/pug/pug2.jpg",
+            "./src/assets/images/pug/pug3.png"
+        ],
+        "poodle": [
+            "./src/assets/images/poodle/poodle1.jpg",
+            "./src/assets/images/poodle/poodle2.jpg",
+            "./src/assets/images/poodle/poodle3.jpg"
+        ]
+    },
+    "jakt": {
+        "beagle": [
+            "./src/assets/images/beagle/beagle1.png",
+            "./src/assets/images/beagle/beagle2.png",
+            "./src/assets/images/beagle/beagle3.png"
+        ]
+    }
 }
