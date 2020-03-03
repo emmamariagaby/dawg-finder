@@ -1,50 +1,80 @@
 import * as React from "react";
 
-interface DogImageProps {
-  source: string
+interface DogImageState {
+  imageSource: string,
 }
 
-interface DogImageState {
-  breed: string,
-  imageURL: string,
+interface DogImageProps {
+  breed?: string
+  dogType: string
+}
+
+interface ImageProps {
+  [key: string]: string
 }
 
 //json https://www.json-generator.com/#
 class DogImage extends React.Component<DogImageProps, DogImageState> {
   state = {
-    imageURL: "",
-    breed: "",
+    imageSource: "",
   }
 
   constructor(props: DogImageProps) {
     super(props);
-
-    this.getRandomImage();
+    this.fetchImageData(this.props.dogType);
   }
+
   render() {
     return (
       <>
-        <img src={this.props.source} width="150px" height="auto" />
-        <img src={this.state.imageURL} width="150px" height="auto" />
+        <img src={this.state.imageSource} width="150px" height="auto" />
       </>
     )
   }
 
-  getRandomNum(limit: number) {
+  /**
+   * Generates a random integer within a range.
+   * @param limit Maximum number to randomize number to.
+   * @returns Random integer.
+   */
+  getRandomInt(limit: number): number {
     return Math.floor(Math.random() * limit);
   }
 
-  getRandomImage() {
+  /**
+   * Fetch dog image and set state imageSource.
+   * @param dogType The group of which to get image paths from.
+   */
+  fetchImageData(dogType: string): void {
     fetch("./src/components/dogimages.json")
       .then(response => response.json())
       .then(data => {
         return (
-          this.setState({ 
-            imageURL: data.corgi[this.getRandomNum(data.corgi.length)] 
+          this.setState({
+            imageSource:
+              this.getRandomImage(data, dogType, this.props.breed)
           })
         )
       })
       .catch(error => console.error(error))
+  }
+
+  /**
+   * Returns image path as string.
+   * @param data Recieved data with images from JSON-file.
+   * @param dogType The group of which to get image paths from.
+   * @param breed Optional, shows a random image of a specified breed.
+   * @returns Image path.
+   */
+  getRandomImage(data: ImageProps, dogType: string, breed?: string): string {
+    for (let i = 0; i < Object.keys(data[dogType]).length; i++) {
+      if (breed != null && Object.keys(data[dogType])[i] == breed) {
+        return Object.values(data[dogType])[i][this.getRandomInt(Object.keys(data[dogType]).length)];
+      } else {
+        return Object.values(data[dogType])[this.getRandomInt(Object.keys(data).length)][this.getRandomInt(Object.keys(data).length)]
+      }
+    }
+    return ".src/assets/images/errorloadimage.png";
   }
 }
 
