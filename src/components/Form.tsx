@@ -25,7 +25,7 @@ class Form extends React.Component<{}, FormState> {
               checked={this.state.chosenValue === "Very active"}
               onChange={this.onRadioChange}
               value="Very active" />
-              <label htmlFor="Very active">Very active</label>
+              <label htmlFor="Very active">Very active </label>
           
             <input
               type="radio"
@@ -33,7 +33,7 @@ class Form extends React.Component<{}, FormState> {
               checked={this.state.chosenValue === "Not very active"}
               onChange={this.onRadioChange}
               value="Not very active" />
-               <label htmlFor="Not very active">Not very active</label>
+               <label htmlFor="Not very active">Not very active </label>
 
               <input
               type="radio"
@@ -41,7 +41,7 @@ class Form extends React.Component<{}, FormState> {
               checked={this.state.chosenValue === "I'm an atletic"}
               onChange={this.onRadioChange}
               value="I'm an atletic" />
-               <label htmlFor="I'm an atletic">I'm an atletic</label>
+               <label htmlFor="I'm an atletic">I'm an atletic </label>
           
           <button type="submit">Submit</button>
         </ul>
