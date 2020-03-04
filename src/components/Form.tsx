@@ -9,7 +9,7 @@ class Form extends React.Component<{}, FormState> {
   constructor(props?: any) {
     super(props);
     this.state = { 
-      chosenValue: "" 
+      chosenValue: ""
     }
   }
 
@@ -40,7 +40,7 @@ class Form extends React.Component<{}, FormState> {
               name="active"
               checked={this.state.chosenValue === "I'm an atletic"}
               onChange={this.onRadioChange}
-              value="I'm an atletic" />
+              value="I'm an atletic"/>
                <label htmlFor="I'm an atletic">I'm an atletic </label>
           
           <button type="submit">Submit</button>
@@ -52,6 +52,8 @@ class Form extends React.Component<{}, FormState> {
   onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(this.state)
+    const { chosenValue } = this.state;
+    localStorage.setItem('chosenValue', chosenValue);
   }
 
   onRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
