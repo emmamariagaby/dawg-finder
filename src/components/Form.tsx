@@ -68,31 +68,12 @@ class Form extends React.Component<{}, FormState> {
 
               <input
               type="radio"
-              name="active"
+              name="interest"
               checked={this.state.secondValue === "I have no special interest"}
               onChange={this.onRadioChangeTwo}
               value="I have no special interest"/>
                <label htmlFor="I have no special interest">I have no special interest </label>
                </section>
-          
-          <li>
-            <label htmlFor="Yes">Yes</label>
-            <input
-              type="radio"
-              name="active"
-              checked={this.state.firstValue === "Yes"}
-              onChange={this.onRadioChangeFirst}
-              value="Yes" />
-          </li>
-          <li>
-            <label htmlFor="No">No</label>
-            <input
-              type="radio"
-              name="active"
-              checked={this.state.firstValue === "No"}
-              onChange={this.onRadioChangeFirst}
-              value="No" />
-          </li>
 
           <button type="submit">Submit</button>
         </ul>
