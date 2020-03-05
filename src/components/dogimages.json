@@ -31,7 +31,8 @@
         ],
         "corgi": [
             "./src/assets/images/corgi/corgi1.jpg",
-            "./src/assets/images/corgi/corgi2.jpg"
+            "./src/assets/images/corgi/corgi2.jpg",
+            "./src/assets/images/corgi/corgi3.jpg"
         ]
     }
 }

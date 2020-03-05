@@ -24,6 +24,6 @@ ReactDOM.render(
         <DogInfo />
         <DogImage dogType="jakt" />
         <Footer />
-        ß</>,
+    </>,
     document.getElementById("root")
 );

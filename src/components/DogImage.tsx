@@ -62,16 +62,14 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
    * Method that returns image path as string.
    * @param dataAsKeys Dog type data as keys, fetched from JSON-file.
    * @param dataAsValues Dog type data as values, fetched from JSON-file.
-   * @returns Image path.
+   * @returns Image path OR error image.
    */
   getRandomImage(dataAsKeys: string[], dataAsValues: string[]): string {
     for (let i = 0; i < dataAsKeys.length; i++) {
-      if (this.props.breed != null && dataAsKeys[i] == this.props.breed) {
+      if (this.props.breed != undefined && dataAsKeys[i] == this.props.breed) {
         return dataAsValues[i][this.getRandomInt(dataAsKeys.length)];
       } else {
-        const result = dataAsValues[this.getRandomInt(dataAsKeys.length)][this.getRandomInt(dataAsKeys.length)]
-        console.log(result)
-        return result
+        return dataAsValues[this.getRandomInt(dataAsKeys.length)][this.getRandomInt(dataAsKeys.length + 1)]
       }
     }
     return ".src/assets/images/errorloadimage.png";
