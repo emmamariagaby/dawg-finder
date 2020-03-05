@@ -13,15 +13,15 @@ class Form extends React.Component<{}, FormState> {
       firstValue: "",
       secondValue: ""
     }
+   this.questionParse = this.questionParse.bind(this);
   }
 
-  render() {
-    return (
-      <form onSubmit={this.onSubmit}>
-        <h1> Form </h1>
-        <ul>
-
-          <section className="questionOne">
+questionParse(q: number) {
+  if (q == 1) {
+  return (
+        <div style={{color: 'green'}} className="formQuestions"> 
+        Fråga 1
+<section className="questionOne">
           <h2>How active are you?</h2>
             <input
               type="radio"
@@ -48,6 +48,30 @@ class Form extends React.Component<{}, FormState> {
                <label htmlFor="I'm an athletic">I'm an athletic </label>
                </section>
 
+        </div>
+        )
+        }
+
+        if (q == 2) {
+  return (
+        <div style={{color: 'green'}} className="formQuestions"> 
+        Fråga 2
+        </div>
+        )
+        } 
+        return (null);
+}
+
+
+  render() {
+    return (
+      <form onSubmit={this.onSubmit}>
+        <h1> Form </h1>
+        <ul>
+
+     {this.questionParse(1)}
+     
+          
               <section className="questionTwo">
                <h2>Do you have any special interest?</h2>
               <input
@@ -75,7 +99,9 @@ class Form extends React.Component<{}, FormState> {
                <label htmlFor="I have no special interest">I have no special interest </label>
                </section>
 
-          <button type="submit">Submit</button>
+          <button type="button">Previous</button>
+          <button type="submit">Next</button>
+        
         </ul>
       </form>
     );
