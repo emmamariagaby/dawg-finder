@@ -1,33 +1,37 @@
 import * as React from "react";
 
-interface DogImageState {
+export interface DogImageState {
   imageSource: string,
 }
 
-interface DogImageProps {
+export interface DogImageProps {
   breed?: string
   dogType: string
 }
 
-interface ImageProps {
+export interface ImageProps {
   [key: string]: string
+
 }
 
 //json https://www.json-generator.com/#
 class DogImage extends React.Component<DogImageProps, DogImageState> {
   state = {
     imageSource: "",
+
   }
 
   constructor(props: DogImageProps) {
     super(props);
-    this.fetchImageData();
+    this.fetchImageData(this.props.dogType);
+
   }
 
   render() {
     return (
       <>
-        <img src={this.state.imageSource} width="100%" height="auto" />
+        <img src={this.state.imageSource} width="150px" height="auto" />
+
       </>
     )
   }
@@ -45,14 +49,14 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
    * Fetch dog image and set state imageSource.
    * @param dogType The group of which to get image paths from.
    */
-  fetchImageData(): void {
+  fetchImageData(dogType: string): void {
     fetch("./src/components/dogimages.json")
       .then(response => response.json())
       .then(data => {
         return (
           this.setState({
             imageSource:
-              this.getRandomImage(data)
+              this.getRandomImage(data, dogType, this.props.breed)
           })
         )
       })
@@ -66,18 +70,12 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
    * @param breed Optional, shows a random image of a specified breed.
    * @returns Image path.
    */
-  getRandomImage(data: ImageProps): string {
-    for (let i = 0; i < Object.keys(data[this.props.dogType]).length; i++) {
-      if (Object.keys(data[this.props.dogType])[i] == this.props.breed) {
-        return Object.values(data[this.props.dogType])[i][this.getRandomInt(Object.keys(data[this.props.dogType]).length)];
+  getRandomImage(data: ImageProps, dogType: string, breed?: string): string {
+    for (let i = 0; i < Object.keys(data[dogType]).length; i++) {
+      if (breed != null && Object.keys(data[dogType])[i] == breed) {
+        return Object.values(data[dogType])[i][this.getRandomInt(Object.keys(data[dogType]).length)];
       } else {
-        let newImg = Object.values(data[this.props.dogType])
-        let randomInd = this.getRandomInt(Object.values(data[this.props.dogType]).length);
-        let scnRnd = this.getRandomInt(Object.keys(data[randomInd]).length)
-        console.log(Object.values(data[randomInd]).length)
-        console.log(Object.keys(data[this.props.dogType]))
-        // return newImg[randomInd][0]
-        return Object.values(data[this.props.dogType])[this.getRandomInt(Object.values(data[this.props.dogType]).length)][this.getRandomInt(Object.keys(data).length)]  
+        return Object.values(data[dogType])[this.getRandomInt(Object.keys(data).length)][this.getRandomInt(Object.keys(data).length)]
       }
     }
     return ".src/assets/images/errorloadimage.png";
