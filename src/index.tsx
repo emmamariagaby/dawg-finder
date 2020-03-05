@@ -20,9 +20,7 @@ ReactDOM.render(
         <Form />
         <Button />
         <Container />
-        <DogText />
-        <DogInfo />
-        <DogImage dogType="jakt" />
+        <DogInfo dogType="jakt" />
         <Footer />
     </>,
     document.getElementById("root")
