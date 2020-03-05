@@ -42,10 +42,10 @@ questionParse(q: number) {
               <input
               type="radio"
               name="active"
-              checked={this.state.firstValue === "I'm an atletic"}
+              checked={this.state.firstValue === "I'm an athletic"}
               onChange={this.onRadioChangeFirst}
-              value="I'm an atletic"/>
-               <label htmlFor="I'm an atletic">I'm an atletic </label>
+              value="I'm an athletic"/>
+               <label htmlFor="I'm an athletic">I'm an athletic </label>
                </section>
 
         </div>
