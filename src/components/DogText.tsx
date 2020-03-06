@@ -7,12 +7,14 @@ export interface DogTextState {
 }
 
 export interface DogTextProps {
-  [key: string]: string
+  dogType: string
+  showDogText: boolean
+  showText?: boolean
 }
 
 class DogText extends React.Component<DogTextProps, DogTextState> {
   state = {
-    textSource: ""
+    textSource: "",
   }
 
   constructor(props: DogTextProps) {
@@ -22,13 +24,18 @@ class DogText extends React.Component<DogTextProps, DogTextState> {
 
   render() {
     return (
-      <>
-        <h3>{this.props.dogType}</h3>
-        <p>{this.state.textSource}</p>
-      </>
+      this.props.showDogText ?
+        <div>
+          <h3>{this.props.dogType}</h3>
+          <p>{this.state.textSource}</p>
+        </div> : null
     );
   }
 
+  /**
+   * Fetches dog info text from JSON-file.
+   * @returns sets textSource in state.
+   */
   fetchDogText() {
     fetch("./src/components/dogtext.json")
       .then(response => response.json())
@@ -42,11 +49,16 @@ class DogText extends React.Component<DogTextProps, DogTextState> {
       .catch(error => console.error(error))
   }
 
+  /**
+   * Get text from fetched data.
+   * @param dataAsValues Dog type data as values, fetched from JSON-file.
+   * @returns Dog text OR error message as string.
+   */
   getDogText(dataAsValues: string[]) {
-      for (let i = 0; i < dataAsValues.length; i++) {
-        return dataAsValues[i]
-      }
-      return "No info found."
+    for (let i = 0; i < dataAsValues.length; i++) {
+      return dataAsValues[i];
+    }
+    return "No info found."
   }
 }
 
