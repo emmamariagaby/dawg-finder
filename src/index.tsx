@@ -21,7 +21,7 @@ ReactDOM.render(
         <Button />
         <Container />
         <DogText dogType="jakt" />
-        <DogInfo />
+        <DogInfo dogType="jakt" />
         <DogImage dogType="jakt" />
         <Footer />
     </>,
