@@ -18,6 +18,10 @@ class Form extends React.Component<{}, FormState> {
 		this.previousQuestion = this.previousQuestion.bind(this);
 	}
 
+  /**
+   * This function handles argument q and compares it to all question statements. 
+   * Returns the correct question.
+   */
 	questionParse(q: number) {
 		if (q == 1) {
 			return (
@@ -137,6 +141,9 @@ class Form extends React.Component<{}, FormState> {
 		return null;
 	}
 
+  /** 
+   * Renders the form.
+   */
 	render() {
 		return (
 			<form onSubmit={this.onSubmit}>
@@ -154,6 +161,10 @@ class Form extends React.Component<{}, FormState> {
 		);
 	}
 
+  /**
+   * Checks questionNumber for invalid value.
+   * Decrements the state questionNumber by 1.
+   */
 	previousQuestion() {
 		if (this.state.questionNumber == 1) {
 			alert('Nu blev det fel!');
@@ -164,6 +175,12 @@ class Form extends React.Component<{}, FormState> {
 		}
 	}
 
+  /**
+   * Void is not assignable to onSubmit which expects a function.
+   * When button "next" is pressed, onSubmit is executed.
+   * If questionNumber is out of bounds, the form is finished.
+   * !!!More documentation required!!! (Emma?, Jonte?)
+   */
 	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		if (this.state.questionNumber == 3) {
 			alert('Visa resultat!');
@@ -180,11 +197,18 @@ class Form extends React.Component<{}, FormState> {
 		}
 	};
 
+  /**
+   * !!!More documentation required!!! (Emma?, Jonte?)
+   */
 	onRadioChangeFirst = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
 			firstValue: e.target.value
 		});
 	};
+
+   /**
+   * !!!More documentation required!!! (Emma?, Jonte?)
+   */
 	onRadioChangeTwo = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
 			secondValue: e.target.value
