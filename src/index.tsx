@@ -20,7 +20,7 @@ ReactDOM.render(
         <Form />
         <Button />
         <Container />
-        <DogText />
+        <DogText dogType="jakt" />
         <DogInfo />
         <DogImage dogType="jakt" />
         <Footer />
