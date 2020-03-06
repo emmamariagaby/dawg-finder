@@ -1,12 +1,13 @@
 import * as React from "react";
 
+import { DogInfoProps } from "./DogInfo";
+
 export interface DogImageState {
   imageSource: string,
 }
 
-export interface DogImageProps {
-  breed?: string
-  dogType: string
+export interface DogImageProps extends DogInfoProps {
+  handleClick: () => void
 }
 
 class DogImage extends React.Component<DogImageProps, DogImageState> {
@@ -17,15 +18,21 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
   constructor(props: DogImageProps) {
     super(props);
     this.fetchImageData();
-
   }
 
   render() {
     return (
       <>
-        <img src={this.state.imageSource} width="100%px" height="auto" />
+        <img src={this.state.imageSource} width="100%px" height="auto" onClick={this.returnData} />
       </>
     )
+  }
+
+  /**
+   * Triggers handleClick method in parent, DogInfo.
+   */
+  returnData = () => {
+    this.props.handleClick();
   }
 
   /**

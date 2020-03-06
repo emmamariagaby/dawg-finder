@@ -18,24 +18,26 @@ class DogInfo extends React.Component<DogInfoProps, DogInfoState> {
     this.state = {
       showText: false
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.setShowTextState = this.setShowTextState.bind(this);
   }
 
   render() {
     return (
       <div>
-        <DogImage dogType={this.props.dogType} showText={this.handleClick} />
-        <DogText dogType={this.props.dogType} />
+        <DogImage dogType={this.props.dogType} handleClick={this.setShowTextState} />
+        <DogText dogType={this.props.dogType} showDogText={this.state.showText} />
       </div>
     );
   }
 
-  hasBreakfast() {
-    return true
-  }
-
-  handleClick() {
+  /**
+   * Conditionally sets showText state.
+   */
+  setShowTextState() {
+    this.state.showText ?
     this.setState({
+      showText: false
+    }) : this.setState({
       showText: true
     })
   }
