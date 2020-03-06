@@ -15,14 +15,15 @@ import DogImage from "./components/DogImage";
 
 ReactDOM.render(
     <>
-    <Header/>
-    <Option/>
-    <Form/>
-    <Button/>
-    <Container/>
-    <DogText/>
-    <DogInfo/>
-    <DogImage/>
-    <Footer/></>,
+        <Header />
+        <Option />
+        <Form />
+        <Button />
+        <Container />
+        <DogText />
+        <DogInfo />
+        <DogImage dogType="jakt" />
+        <Footer />
+    </>,
     document.getElementById("root")
 );
