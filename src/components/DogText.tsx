@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { DogInfoProps } from "./DogInfo";
+// import { DogInfoProps } from "./DogInfo";
 
 export interface DogTextState {
   textSource: string
@@ -11,6 +11,15 @@ export interface DogTextProps {
 }
 
 class DogText extends React.Component<DogTextProps, DogTextState> {
+  state = {
+    textSource: ""
+  }
+
+  constructor(props: DogTextProps) {
+    super(props);
+    this.fetchDogText();
+  }
+
   render() {
     return (
       <>
@@ -26,18 +35,18 @@ class DogText extends React.Component<DogTextProps, DogTextState> {
       .then(data => {
         return (
           this.setState({
-            textSource: this.getDogText(data) as string
+            textSource: this.getDogText(Object.values(data[this.props.dogType]))
           })
         )
       })
       .catch(error => console.error(error))
   }
 
-  getDogText(data: DogTextProps) {
-      for (let i = 0; i < Object.keys(data).length; i++) {
-        return "hej"
+  getDogText(dataAsValues: string[]) {
+      for (let i = 0; i < dataAsValues.length; i++) {
+        return dataAsValues[i]
       }
-      return "då"
+      return "No info found."
   }
 }
 
