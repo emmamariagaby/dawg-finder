@@ -7,11 +7,7 @@ import Option from "./components/Option";
 import Form from "./components/Form";
 import Button from "./components/Button";
 import Container from "./components/Container";
-import DogText from "./components/DogText";
-import DogInfo from "./components/DogInfo";
-// import DogImage from "./components/DogImage";
-
-
+import ResultsContainer from "./components/ResultsContainer";
 
 ReactDOM.render(
     <>
@@ -20,7 +16,7 @@ ReactDOM.render(
         <Form />
         <Button />
         <Container />
-        <DogInfo dogType="jakt" />
+        <ResultsContainer result="sällskap" />
         <Footer />
     </>,
     document.getElementById("root")
