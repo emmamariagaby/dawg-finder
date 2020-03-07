@@ -1,64 +1,30 @@
 import * as React from "react";
+import { DogInfoProps } from "./DogInfo";
 
-// import { DogInfoProps } from "./DogInfo";
-
-export interface DogTextState {
-  textSource: string
-}
-
-export interface DogTextProps {
+export interface DogTextProps extends DogInfoProps {
   dogType: string
   showDogText: boolean
-  showText?: boolean
 }
 
-class DogText extends React.Component<DogTextProps, DogTextState> {
-  state = {
-    textSource: "",
-  }
-
-  constructor(props: DogTextProps) {
-    super(props);
-    this.fetchDogText();
-  }
-
+/** Renders DogText consisting of title and parapgraph. */
+class DogText extends React.Component<DogTextProps, {}> {
   render() {
     return (
       this.props.showDogText ?
-        <div>
-          <h3>{this.props.dogType}</h3>
-          <p>{this.state.textSource}</p>
+        <div className="DogText">
+          <h3>{this.props.source[0]}</h3>
+          <p>{Object.values(this.props.source[1])[0]}</p>
         </div> : null
     );
   }
 
   /**
-   * Fetches dog info text from JSON-file.
-   * @returns sets textSource in state.
+   * Catches errors and logs in the console.
+   * @param error The error that occured.
+   * @param errorInfo Info on said error.
    */
-  fetchDogText() {
-    fetch("./src/components/dogtext.json")
-      .then(response => response.json())
-      .then(data => {
-        return (
-          this.setState({
-            textSource: this.getDogText(Object.values(data[this.props.dogType]))
-          })
-        )
-      })
-      .catch(error => console.error(error))
-  }
-
-  /**
-   * Get text from fetched data.
-   * @param dataAsValues Dog type data as values, fetched from JSON-file.
-   * @returns Dog text OR error message as string.
-   */
-  getDogText(dataAsValues: string[]) {
-    for (let i = 0; i < dataAsValues.length; i++) {
-      return dataAsValues[i];
-    }
-    return "No info found."
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.log(error, errorInfo)
   }
 }
 
