@@ -1,0 +1,56 @@
+{
+    "sällskap": [{
+        "pug": {
+            "info": "pugpugpugpug pugp pug pug",
+            "images": [
+                "./src/assets/images/pug/pug1.jpg",
+                "./src/assets/images/pug/pug2.jpg",
+                "./src/assets/images/pug/pug3.jpg"
+            ]
+        },
+        "poodle": {
+            "info": "poodle poodle poodle",
+            "images": [
+                "./src/assets/images/poodle/poodle1.jpg",
+                "./src/assets/images/poodle/poodle2.jpg",
+                "./src/assets/images/poodle/poodle3.jpg"
+            ]
+        }
+    }],
+    "jakt": [{
+        "beagle": {
+            "info": "beagle bealge beagle",
+            "images": [
+                "./src/assets/images/beagle/beagle1.jpg",
+                "./src/assets/images/beagle/beagle2.jpg",
+                "./src/assets/images/beagle/beagle3.jpg"
+            ]
+        },
+        "lakelandterrier": {
+            "info": "lakelandterrierlakeland terrier lakelandterrier",
+            "images": [
+                "./src/assets/images/lakelandterrier/lakelandterrier1.jpg",
+                "./src/assets/images/lakelandterrier/lakelandterrier2.jpg",
+                "./src/assets/images/lakelandterrier/lakelandterrier3.jpg"
+            ]
+        }
+    }],
+    "vallhund": [{
+        "bordercollie": {
+            "info": "border collie bordercollie border",
+            "images": [
+                "./src/assets/images/bordercollie/bordercollie1.jpg",
+                "./src/assets/images/bordercollie/bordercollie2.jpg",
+                "./src/assets/images/bordercollie/bordercollie3.jpg"
+            ]
+        },
+        "corgi": {
+            "info": "corgicorgicorgi corgicorgi corgicorgi",
+            "images": [
+                "./src/assets/images/corgi/corgi1.jpg",
+                "./src/assets/images/corgi/corgi2.jpg",
+                "./src/assets/images/corgi/corgi3.jpg"
+            ]
+        }
+    }]
+}
