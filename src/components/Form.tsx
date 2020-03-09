@@ -215,5 +215,8 @@ class Form extends React.Component<{}, FormState> {
 		});
 	};
 }
-
+ 
+// export const FormRender: React.FC<FormState> = () => {
+//     return this.render();
+// }
 export default Form;

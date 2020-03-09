@@ -6,19 +6,16 @@ module.exports = {
 
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx"]
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader"
-                    }
-                ]
+                use: [{
+                    loader: "ts-loader"
+                }]
             },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
