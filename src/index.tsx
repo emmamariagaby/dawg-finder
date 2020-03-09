@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 
 import Header from "./components/Header";
+import Home from "./components/screens/Home";
 import Footer from "./components/Footer";
 import Option from "./components/Option";
 import Form from "./components/Form";
@@ -22,7 +23,7 @@ ReactDOM.render(
         <nav>
           <ul>
             <li>
-              <Link to="/form">Home</Link>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
               <Link to="/resultContainer">About</Link>
@@ -36,8 +37,8 @@ ReactDOM.render(
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/form">
-            <Form />
+          <Route path="/Home">
+            <Home />
           </Route>
           <Route path="/resultContainer">
             <ResultsContainer result="sällskap" />
