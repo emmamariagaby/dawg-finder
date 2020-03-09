@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import Form from "./components/Form";
 import ResultsContanier from "./components/ResultsContainer";
