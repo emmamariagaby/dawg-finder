@@ -10,6 +10,8 @@ import {
 import Header from "./components/Header";
 import Home from "./components/screens/Home";
 import FormScreen from "./components/screens/FormScreen";
+import ResultScreen from "./components/screens/ResultScreen";
+import DogScreen from "./components/screens/DogScreen";
 import Footer from "./components/Footer";
 import Option from "./components/Option";
 import Form from "./components/Form";
@@ -30,7 +32,10 @@ ReactDOM.render(
               <Link to="/Form">Form</Link>
             </li>
             <li>
-              <Link to="/resultContainer">About</Link>
+              <Link to="/results">About</Link>
+            </li>
+            <li>
+              <Link to="/DogScreen">DogImages</Link>
             </li>
             <li>
               <Link to="/footer">Users</Link>
@@ -47,8 +52,11 @@ ReactDOM.render(
            <Route path="/Form">
             <FormScreen />
           </Route>
-          <Route path="/resultContainer">
-            <ResultsContainer result="sällskap" />
+          <Route path="/results">
+            <ResultScreen />
+          </Route>
+          <Route path="/DogScreen">
+            <DogScreen />
           </Route>
           <Route path="/footer">
             <Footer />
