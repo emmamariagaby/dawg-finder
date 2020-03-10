@@ -9,7 +9,7 @@ import Button from "./components/Button";
 import Container from "./components/Container";
 import DogText from "./components/DogText";
 import DogInfo from "./components/DogInfo";
-import DogImage from "./components/DogImage";
+// import DogImage from "./components/DogImage";
 
 
 
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Container />
         <DogText />
         <DogInfo />
-        <DogImage dogType="jakt" />
+        {/* <DogImage dogType="jakt" /> */}
         <Footer />
     </>,
     document.getElementById("root")
