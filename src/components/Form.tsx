@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import ResultForm from './ResultForm'
 
 export interface FormState {
@@ -8,7 +7,6 @@ export interface FormState {
 	thirdValue: string
 	questionNumber: number;
 	isFormSubmit: boolean;
-	
 }
 
 class Form extends React.Component<{}, FormState> {
@@ -19,8 +17,9 @@ class Form extends React.Component<{}, FormState> {
 			firstValue: '',
 			secondValue: '',
 			thirdValue: '',
-			isFormSubmit: false
+			isFormSubmit: false       
 		};
+    
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
 	}
@@ -61,28 +60,34 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="active"
+
 							checked={this.state.firstValue === 'A'}
 							onChange={this.onRadioChangeFirst}
 							value="A"
 						/>
+            
 						<label htmlFor="Very active">Very active </label>
 
 						<input
 							type="radio"
 							name="active"
+
 							checked={this.state.firstValue === 'B'}
 							onChange={this.onRadioChangeFirst}
 							value="B"
 						/>
+            
 						<label htmlFor="Not very active">Not very active </label>
 
 						<input
 							type="radio"
 							name="active"
+
 							checked={this.state.firstValue === "C"}
 							onChange={this.onRadioChangeFirst}
 							value="C"
 						/>
+            
 						<label htmlFor="I'm an athletic">I'm an athletic </label>
 					</section>
 				</div>
@@ -98,6 +103,7 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="interest"
+
 							checked={this.state.secondValue === "A"}
 							onChange={this.onRadioChangeTwo}
 							value="A"
@@ -108,6 +114,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="interest"
 							checked={
+
 								this.state.secondValue === "B"
 							}
 							onChange={this.onRadioChangeTwo}
@@ -118,9 +125,11 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="interest"
+
 							checked={this.state.secondValue === 'C'}
 							onChange={this.onRadioChangeTwo}
 							value="C"
+
 						/>
 						<label htmlFor="I have no special interest">I have no special interest </label>
 					</section>
@@ -136,24 +145,29 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="likes"
+
 							checked={this.state.thirdValue === 'A'}
 							onChange={this.onRadioChangeThird}
 							value="A"
+
 						/>
 						<label htmlFor="Very mucho!">Very mucho! </label>
 
 						<input
 							type="radio"
 							name="likes"
+
 							checked={this.state.thirdValue === 'B'}
 							onChange={this.onRadioChangeThird}
 							value="B"
+
 						/>
 						<label htmlFor="Not at all">Not at all </label>
 
 						<input
 							type="radio"
 							name="likes"
+
 							checked={this.state.thirdValue === 'C'}
 							onChange={this.onRadioChangeThird}
 							value="C"
@@ -167,6 +181,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		return null;
 	}
+
 
 	countResult() {
 
@@ -204,6 +219,26 @@ class Form extends React.Component<{}, FormState> {
 		else {
 			console.log('alla hundar passar dig')
 		}
+
+  /** 
+   * Renders the form.
+   */
+	render() {
+		return (
+			<form onSubmit={this.onSubmit}>
+				<h1> Form </h1>
+				<ul>
+					{this.questionParse(this.state.questionNumber)}
+
+					<button type="button" onClick={() => this.previousQuestion()}>
+						Previous
+					</button>
+
+					<button type="submit">Next</button>
+				</ul>
+			</form>
+		);
+
 	}
 
   /**
@@ -227,6 +262,7 @@ class Form extends React.Component<{}, FormState> {
    * !!!More documentation required!!! (Emma?, Jonte?)
    */
 	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
 		if (this.state.thirdValue != "") {
 			const { firstValue } = this.state;
 			localStorage.setItem('firstValue', firstValue);
@@ -248,8 +284,10 @@ class Form extends React.Component<{}, FormState> {
 			localStorage.setItem('firstValue', firstValue);
 			const { secondValue } = this.state;
 			localStorage.setItem('secondValue', secondValue);
+
 			const { thirdValue } = this.state;
 			localStorage.setItem('thirdValue', thirdValue);
+
 			this.setState({
 				questionNumber: this.state.questionNumber + 1
 			});
@@ -274,11 +312,13 @@ class Form extends React.Component<{}, FormState> {
 		});
 	};
 
+
 		onRadioChangeThird = (e: React.ChangeEvent<HTMLInputElement>) => {
 			this.setState({
 				thirdValue: e.target.value
 			});
 	};
+
 }
  
 // export const FormRender: React.FC<FormState> = () => {

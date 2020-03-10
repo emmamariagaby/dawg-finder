@@ -2,24 +2,20 @@ import * as React from 'react';
 
 import Header from "../Header";
 import Container from "../Container";
-import Form from "../Form";
+import ResultsContainer from "../ResultsContainer";
 import Button from "../Button";
 import Footer from "../Footer";
 
  /** 
- * Form kommer fram när containern är färdig. Just nu syns inte form alls om man inte flyttar den ut ur "container"
- *
+ * 
  */
-class FormScreen extends React.Component {
+class ResultScreen extends React.Component {
 render() {
     return(
         <>
-
         <Header />
         <Container>
-            <Form />
-            <Button />
-            <Button />
+            <ResultsContainer result="jakt" />
             <Button />
         </Container>
         <Footer />
@@ -30,4 +26,4 @@ render() {
 
 };
 
-export default FormScreen;
+export default ResultScreen;
