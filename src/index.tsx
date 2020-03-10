@@ -9,6 +9,7 @@ import {
 
 import Header from "./components/Header";
 import Home from "./components/screens/Home";
+import FormScreen from "./components/screens/FormScreen";
 import Footer from "./components/Footer";
 import Option from "./components/Option";
 import Form from "./components/Form";
@@ -25,6 +26,9 @@ ReactDOM.render(
             <li>
               <Link to="/Home">Home</Link>
             </li>
+             <li>
+              <Link to="/Form">Form</Link>
+            </li>
             <li>
               <Link to="/resultContainer">About</Link>
             </li>
@@ -40,6 +44,9 @@ ReactDOM.render(
           <Route path="/Home">
             <Home />
           </Route>
+           <Route path="/Form">
+            <FormScreen />
+          </Route>
           <Route path="/resultContainer">
             <ResultsContainer result="sällskap" />
           </Route>
@@ -50,34 +57,5 @@ ReactDOM.render(
       </div>
     </Router>,
   
-
-
-    // <>
-    //     <Header />
-    //     <Option />
-    //     <Form />
-    //     <Button />
-    //     <Container />
-    //     <ResultsContainer result="sällskap" />
-    //     <Footer />
-    // </>,
     document.getElementById("root")
 );
-
-
-
-// import * as React from "react";
-// import { BrowserRouter, Route } from "react-router-dom";
-// import Form from "./components/Form";
-// import ResultsContanier from "./components/ResultsContainer";
-
-// const ResultRouter: React.FC = () =>{
-//     return (
-//         <BrowserRouter>
-//             <Route path="/" component={Form} />
-//             <Route path="/a" component={ResultsContanier} />
-//         </BrowserRouter>   
-//     );
-// };
-
-// export default ResultRouter;
