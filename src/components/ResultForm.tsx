@@ -31,6 +31,9 @@ class ResultForm extends React.Component<ResultFormProps, {}> {
       
     }
 
+    /**
+   * Functions for showing result
+   */
     answersA() {
       <ResultsContainer result="sällskap" />
     }

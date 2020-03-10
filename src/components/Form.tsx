@@ -168,7 +168,10 @@ class Form extends React.Component<{}, FormState> {
 		return null;
 	}
 
-	countResult() {
+	/*
+   * Function created for handling selected answers in form
+   */
+	handleResult() {
 
 		let A = 0;
 		let B = 0;
@@ -188,10 +191,14 @@ class Form extends React.Component<{}, FormState> {
 				console.log('här var ett C')
 				C++
 			}}) 
-			this.handleResult(A, B, C)
+			this.countResult(A, B, C)
 	}
 
-	handleResult(A, B, C) {
+	/** 
+   * Function created for counting result in form
+   */
+
+	countResult(A, B, C) {
 		if (A>B && A>C) {
 		console.log('A', A)
 		}
@@ -239,7 +246,7 @@ class Form extends React.Component<{}, FormState> {
 				isFormSubmit: true
 			});
 			console.log(this.state);
-			this.countResult()
+			this.handleResult()
 			e.preventDefault();
 		} else {
 			e.preventDefault();
@@ -257,7 +264,7 @@ class Form extends React.Component<{}, FormState> {
 	};
 
   /**
-   * !!!More documentation required!!! (Emma?, Jonte?)
+   * Event handlers for each question in form
    */
 	onRadioChangeFirst = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
@@ -265,9 +272,6 @@ class Form extends React.Component<{}, FormState> {
 		});
 	};
 
-   /**
-   * !!!More documentation required!!! (Emma?, Jonte?)
-   */
 	onRadioChangeTwo = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
 			secondValue: e.target.value
