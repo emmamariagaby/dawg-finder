@@ -14,12 +14,12 @@ class FormScreen extends React.Component {
 render() {
     return(
         <>
+        <Form />
         <Header />
         <Container>
-            <Form />
-            <Button />
-            <Button />
-            <Button />
+        <Button />
+        <Button />
+        <Button />
         </Container>
         <Footer />
         </>
