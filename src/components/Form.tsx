@@ -9,6 +9,7 @@ export interface FormState {
 	thirdValue: string
 	questionNumber: number;
 	isFormSubmit: boolean;
+	formResult: string;
 	
 }
 
@@ -20,7 +21,8 @@ class Form extends React.Component<{}, FormState> {
 			firstValue: '',
 			secondValue: '',
 			thirdValue: '',
-			isFormSubmit: false
+			isFormSubmit: false,
+			formResult: '',
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
@@ -40,7 +42,8 @@ class Form extends React.Component<{}, FormState> {
 					Previous
 				</button>
 
-				<button type="submit">Next</button>
+				<button type="submit">Next</button>	
+				 {this.state.isFormSubmit ? <ResultsContainer result={this.state.formResult} /> : null}	
 				
 			</ul>
 		</form>
@@ -206,7 +209,9 @@ class Form extends React.Component<{}, FormState> {
 			this.answersC()	
 		}
 		else {
-			console.log('alla hundar passar dig')
+			this.answersA() 
+			this.answersB()
+			this.answersC()
 		}
 	}
 
@@ -215,21 +220,25 @@ class Form extends React.Component<{}, FormState> {
    */
   answersA() {
 	console.log("Du ska ha en sällskapshund");
-	return ( <ResultsContainer result="sällskap" />
-	)
+	this.setState({
+		formResult: "sällskapshund"
+	});
+
   }
 
   answersB() {
 	console.log("Du ska ha en jakthund");
-	return ( <ResultsContainer result="jakt" />
-	)
+	this.setState({
+		formResult: "jakthund"
+	});
   }
 
   answersC() {
 	console.log("Du ska ha en vallhund");
-	return ( <ResultsContainer result="vallhund" />
-	)
-  }
+	this.setState({
+		formResult: "vallhund"
+	});
+}
 
   /**
    * Checks questionNumber for invalid value.

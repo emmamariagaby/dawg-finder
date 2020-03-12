@@ -1,5 +1,5 @@
 {
-    "sällskap": [{
+    "sällskapshund": [{
         "pug": {
             "info": "pugpugpugpug pugp pug pug",
             "images": [
@@ -17,7 +17,7 @@
             ]
         }
     }],
-    "jakt": [{
+    "jakthund": [{
         "beagle": {
             "info": "beagle bealge beagle",
             "images": [
