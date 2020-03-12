@@ -3,6 +3,8 @@ import * as React from 'react';
 import ResultForm from './ResultForm'
 import ResultsContainer from "./ResultsContainer";
 
+import "../styles/main.css"
+
 export interface FormState {
 	firstValue: string;
 	secondValue: string;
@@ -31,21 +33,20 @@ class Form extends React.Component<{}, FormState> {
 	/** 
    * Renders the form.
    */
-  render() {
-	return (
-		<form onSubmit={this.onSubmit}>
-			<h1> Form </h1>
-			<ul>
+	render() {
+		return (
+			<form onSubmit={this.onSubmit}>
 				{this.questionParse(this.state.questionNumber)}
 
-				<button type="button" onClick={() => this.previousQuestion()}>
-					Previous
-				</button>
+				<div className="rowButtons">
+					<button type="button" onClick={() => this.previousQuestion()}>
+						Previous
+					</button>
 
 				<button type="submit">Next</button>	
 				 {this.state.isFormSubmit ? <ResultsContainer result={this.state.formResult} /> : null}	
 				
-			</ul>
+			</div>
 		</form>
 		
 	);
@@ -58,114 +59,127 @@ class Form extends React.Component<{}, FormState> {
 	questionParse(q: number) {
 		if (q == 1) {
 			return (
-				<div style={{ color: 'green' }} className="formQuestions">
-					Fråga 1
-					<section className="questionOne">
-						<h2>How active are you?</h2>
+				<div className="formQuestions">
+					<h2>How active are you?</h2>
+					<div>
 						<input
 							type="radio"
 							name="active"
 							checked={this.state.firstValue === 'A'}
+							id="Very active"
 							onChange={this.onRadioChangeFirst}
-							value="A"
-						/>
+							value="A" />
 						<label htmlFor="Very active">Very active </label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="active"
 							checked={this.state.firstValue === 'B'}
+							id="Not very active"
 							onChange={this.onRadioChangeFirst}
 							value="B"
 						/>
 						<label htmlFor="Not very active">Not very active </label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="active"
 							checked={this.state.firstValue === "C"}
+							id="I'm an athletic"
 							onChange={this.onRadioChangeFirst}
 							value="C"
 						/>
 						<label htmlFor="I'm an athletic">I'm an athletic </label>
-					</section>
+					</div>
 				</div>
 			);
 		}
 
 		if (q == 2) {
 			return (
-				<div style={{ color: 'blue' }} className="formQuestions">
-					Fråga 2
-					<section className="questionTwo">
-						<h2>Do you have any special interest?</h2>
+				<div className="formQuestions">
+					<h2>Do you have any special interest?</h2>
+					<div>
 						<input
 							type="radio"
 							name="interest"
 							checked={this.state.secondValue === "A"}
+							id="I'm interested in hunting, search or rescue training"
 							onChange={this.onRadioChangeTwo}
 							value="A"
 						/>
 						<label htmlFor="I'm interested in hunting, search or rescue training">I'm interested in hunting, search or rescue training</label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="interest"
-							checked={
-								this.state.secondValue === "B"
-							}
+							checked={this.state.secondValue === "B"}
+							id="I'm interested in herding sheep and living the farm life"
 							onChange={this.onRadioChangeTwo}
 							value="B"
 						/>
 						<label htmlFor="I'm interested in herding sheep and living the farm life">I'm interested in herding sheep and living the farm life</label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="interest"
 							checked={this.state.secondValue === 'C'}
+							id="I have no special interest"
 							onChange={this.onRadioChangeTwo}
 							value="C"
 						/>
 						<label htmlFor="I have no special interest">I have no special interest </label>
-					</section>
+					</div>
 				</div>
 			);
 		}
 		if (q == 3) {
 			return (
-				<div style={{ color: 'red' }} className="formQuestions">
-					Fråga 3
-					<section className="questionThree">
-						<h2>Do you like dawgs?</h2>
+				<div className="formQuestions">
+					<h2>Do you like dawgs?</h2>
+					<div>
 						<input
 							type="radio"
 							name="likes"
 							checked={this.state.thirdValue === 'A'}
+							id="Very mucho!"
 							onChange={this.onRadioChangeThird}
 							value="A"
 						/>
 						<label htmlFor="Very mucho!">Very mucho! </label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="likes"
 							checked={this.state.thirdValue === 'B'}
+							id="Not at all"
 							onChange={this.onRadioChangeThird}
 							value="B"
 						/>
 						<label htmlFor="Not at all">Not at all </label>
+					</div>
 
+					<div>
 						<input
 							type="radio"
 							name="likes"
 							checked={this.state.thirdValue === 'C'}
+							id="Yaaas ofc!"
 							onChange={this.onRadioChangeThird}
 							value="C"
 						/>
 						<label htmlFor="Yaaas ofc!">Yaaas ofc! </label>
-						
-					</section>
-				
+					</div>
 				</div>
 			);
 		}

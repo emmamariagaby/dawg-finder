@@ -1,9 +1,11 @@
 import * as React from "react";
 
+import "../styles/main.css"
+
 class Footer extends React.Component {
     render() {
         return (
-            <div>
+            <div className="footer">
                 <p>
                     Repository <a href="https://github.com/emmamariagaby/dawg-finder">[link]</a>
                 </p>
