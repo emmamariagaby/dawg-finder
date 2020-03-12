@@ -1,9 +1,14 @@
 import * as React from 'react';
 
+import ResultForm from './ResultForm'
+
 export interface FormState {
 	firstValue: string;
 	secondValue: string;
+	thirdValue: string
 	questionNumber: number;
+	isFormSubmit: boolean;
+	
 }
 
 class Form extends React.Component<{}, FormState> {
@@ -12,11 +17,35 @@ class Form extends React.Component<{}, FormState> {
 		this.state = {
 			questionNumber: 1,
 			firstValue: '',
-			secondValue: ''
+			secondValue: '',
+			thirdValue: '',
+			isFormSubmit: false
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
 	}
+
+	/** 
+   * Renders the form.
+   */
+  render() {
+	return (
+		<form onSubmit={this.onSubmit}>
+			<h1> Form </h1>
+			<ul>
+				{this.questionParse(this.state.questionNumber)}
+
+				<button type="button" onClick={() => this.previousQuestion()}>
+					Previous
+				</button>
+
+				<button type="submit">Next</button>
+				{this.state.isFormSubmit ? <ResultForm answers={this.state} /> : null}
+			</ul>
+		</form>
+		
+	);
+}
 
   /**
    * This function handles argument q and compares it to all question statements. 
@@ -32,27 +61,27 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="active"
-							checked={this.state.firstValue === 'Very active'}
+							checked={this.state.firstValue === 'A'}
 							onChange={this.onRadioChangeFirst}
-							value="Very active"
+							value="A"
 						/>
 						<label htmlFor="Very active">Very active </label>
 
 						<input
 							type="radio"
 							name="active"
-							checked={this.state.firstValue === 'Not very active'}
+							checked={this.state.firstValue === 'B'}
 							onChange={this.onRadioChangeFirst}
-							value="Not very active"
+							value="B"
 						/>
 						<label htmlFor="Not very active">Not very active </label>
 
 						<input
 							type="radio"
 							name="active"
-							checked={this.state.firstValue === "I'm an athletic"}
+							checked={this.state.firstValue === "C"}
 							onChange={this.onRadioChangeFirst}
-							value="I'm an athletic"
+							value="C"
 						/>
 						<label htmlFor="I'm an athletic">I'm an athletic </label>
 					</section>
@@ -69,33 +98,29 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="interest"
-							checked={this.state.secondValue === "I'm interested in hunting, search or rescue training"}
+							checked={this.state.secondValue === "A"}
 							onChange={this.onRadioChangeTwo}
-							value="I'm interested in hunting, search or rescue training"
+							value="A"
 						/>
-						<label htmlFor="I'm interested in hunting, search or rescue training">
-							I'm interested in hunting, search or rescue training{' '}
-						</label>
+						<label htmlFor="I'm interested in hunting, search or rescue training">I'm interested in hunting, search or rescue training</label>
 
 						<input
 							type="radio"
 							name="interest"
 							checked={
-								this.state.secondValue === "I'm interested in herding sheep and living the farm life"
+								this.state.secondValue === "B"
 							}
 							onChange={this.onRadioChangeTwo}
-							value="I'm interested in herding sheep and living the farm life"
+							value="B"
 						/>
-						<label htmlFor="I'm interested in herding sheep and living the farm life">
-							I'm interested in herding sheep and living the farm life{' '}
-						</label>
+						<label htmlFor="I'm interested in herding sheep and living the farm life">I'm interested in herding sheep and living the farm life</label>
 
 						<input
 							type="radio"
 							name="interest"
-							checked={this.state.secondValue === 'I have no special interest'}
+							checked={this.state.secondValue === 'C'}
 							onChange={this.onRadioChangeTwo}
-							value="I have no special interest"
+							value="C"
 						/>
 						<label htmlFor="I have no special interest">I have no special interest </label>
 					</section>
@@ -111,54 +136,81 @@ class Form extends React.Component<{}, FormState> {
 						<input
 							type="radio"
 							name="likes"
-							checked={this.state.firstValue === 'Very mucho!'}
-							onChange={this.onRadioChangeFirst}
-							value="Very mucho!"
+							checked={this.state.thirdValue === 'A'}
+							onChange={this.onRadioChangeThird}
+							value="A"
 						/>
 						<label htmlFor="Very mucho!">Very mucho! </label>
 
 						<input
 							type="radio"
 							name="likes"
-							checked={this.state.firstValue === 'Not at all'}
-							onChange={this.onRadioChangeFirst}
-							value="Not at all"
+							checked={this.state.thirdValue === 'B'}
+							onChange={this.onRadioChangeThird}
+							value="B"
 						/>
 						<label htmlFor="Not at all">Not at all </label>
 
 						<input
 							type="radio"
 							name="likes"
-							checked={this.state.firstValue === 'Yaaas ofc!'}
-							onChange={this.onRadioChangeFirst}
-							value="Yaaas ofc!"
+							checked={this.state.thirdValue === 'C'}
+							onChange={this.onRadioChangeThird}
+							value="C"
 						/>
 						<label htmlFor="Yaaas ofc!">Yaaas ofc! </label>
+						
 					</section>
+				
 				</div>
 			);
 		}
 		return null;
 	}
 
-  /** 
-   * Renders the form.
+	/*
+   * Function created for handling selected answers in form
    */
-	render() {
-		return (
-			<form onSubmit={this.onSubmit}>
-				<h1> Form </h1>
-				<ul>
-					{this.questionParse(this.state.questionNumber)}
+	handleResult() {
 
-					<button type="button" onClick={() => this.previousQuestion()}>
-						Previous
-					</button>
+		let A = 0;
+		let B = 0;
+		let C = 0;
 
-					<button type="submit">Next</button>
-				</ul>
-			</form>
-		);
+		Object.getOwnPropertyNames(this.state).map(
+			(answer) => { 
+				console.log()
+			if (this.state[answer] === 'A') {
+				console.log('här är A')
+				A++ 	
+			} 
+			else if (this.state[answer] === 'B') {
+				console.log('här är B')
+				B++
+			} else if (this.state[answer] === 'C') {
+				console.log('här var ett C')
+				C++
+			}}) 
+			this.countResult(A, B, C)
+	}
+
+	/** 
+   * Function created for counting result in form
+   */
+
+	countResult(A, B, C) {
+		if (A>B && A>C) {
+		console.log('A', A)
+		}
+		else if (B>A && B>C) {
+			console.log('B', B);	
+		}
+		else if (C>A && C>B) {
+			console.log('C', C);	
+		}
+		else {
+			console.log('alla hundar passar dig')
+		}
 	}
 
   /**
@@ -182,8 +234,20 @@ class Form extends React.Component<{}, FormState> {
    * !!!More documentation required!!! (Emma?, Jonte?)
    */
 	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		if (this.state.questionNumber == 3) {
-			alert('Visa resultat!');
+		if (this.state.thirdValue != "") {
+			const { firstValue } = this.state;
+			localStorage.setItem('firstValue', firstValue);
+			const { secondValue } = this.state;
+			localStorage.setItem('secondValue', secondValue);
+			const { thirdValue } = this.state;
+			localStorage.setItem('thirdValue', thirdValue);
+			this.setState({
+				questionNumber: this.state.questionNumber,
+				isFormSubmit: true
+			});
+			console.log(this.state);
+			this.handleResult()
+			e.preventDefault();
 		} else {
 			e.preventDefault();
 			console.log(this.state);
@@ -191,6 +255,8 @@ class Form extends React.Component<{}, FormState> {
 			localStorage.setItem('firstValue', firstValue);
 			const { secondValue } = this.state;
 			localStorage.setItem('secondValue', secondValue);
+			const { thirdValue } = this.state;
+			localStorage.setItem('thirdValue', thirdValue);
 			this.setState({
 				questionNumber: this.state.questionNumber + 1
 			});
@@ -198,7 +264,7 @@ class Form extends React.Component<{}, FormState> {
 	};
 
   /**
-   * !!!More documentation required!!! (Emma?, Jonte?)
+   * Event handlers for each question in form
    */
 	onRadioChangeFirst = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
@@ -206,13 +272,16 @@ class Form extends React.Component<{}, FormState> {
 		});
 	};
 
-   /**
-   * !!!More documentation required!!! (Emma?, Jonte?)
-   */
 	onRadioChangeTwo = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
 			secondValue: e.target.value
 		});
+	};
+
+		onRadioChangeThird = (e: React.ChangeEvent<HTMLInputElement>) => {
+			this.setState({
+				thirdValue: e.target.value
+			});
 	};
 }
  
