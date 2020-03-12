@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import ResultForm from './ResultForm'
+import ResultsContainer from "./ResultsContainer";
 
 export interface FormState {
 	firstValue: string;
@@ -181,14 +182,11 @@ class Form extends React.Component<{}, FormState> {
 			(answer) => { 
 				console.log()
 			if (this.state[answer] === 'A') {
-				console.log('här är A')
 				A++ 	
 			} 
 			else if (this.state[answer] === 'B') {
-				console.log('här är B')
 				B++
 			} else if (this.state[answer] === 'C') {
-				console.log('här var ett C')
 				C++
 			}}) 
 			this.countResult(A, B, C)
@@ -197,21 +195,38 @@ class Form extends React.Component<{}, FormState> {
 	/** 
    * Function created for counting result in form
    */
-
 	countResult(A, B, C) {
 		if (A>B && A>C) {
-		console.log('A', A)
+		this.answersA()	
 		}
 		else if (B>A && B>C) {
-			console.log('B', B);	
+			this.answersB()	
 		}
 		else if (C>A && C>B) {
-			console.log('C', C);	
+			this.answersC()	
 		}
 		else {
 			console.log('alla hundar passar dig')
 		}
 	}
+
+	/**
+   * Functions for showing result
+   */
+  answersA() {
+	console.log("Du ska ha en sällskapshund");
+	<ResultsContainer result="sällskap" />
+  }
+
+  answersB() {
+	console.log("Du ska ha en jakthund");
+	<ResultsContainer result="jakt" />
+  }
+
+  answersC() {
+	console.log("Du ska ha en vallhund");
+	<ResultsContainer result="vallhund" />
+  }
 
   /**
    * Checks questionNumber for invalid value.
