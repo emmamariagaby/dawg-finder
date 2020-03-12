@@ -41,7 +41,7 @@ class Form extends React.Component<{}, FormState> {
 				</button>
 
 				<button type="submit">Next</button>
-				{this.state.isFormSubmit ? <ResultForm answers={this.state} /> : null}
+				
 			</ul>
 		</form>
 		
@@ -215,17 +215,20 @@ class Form extends React.Component<{}, FormState> {
    */
   answersA() {
 	console.log("Du ska ha en sällskapshund");
-	<ResultsContainer result="sällskap" />
+	return ( <ResultsContainer result="sällskap" />
+	)
   }
 
   answersB() {
 	console.log("Du ska ha en jakthund");
-	<ResultsContainer result="jakt" />
+	return ( <ResultsContainer result="jakt" />
+	)
   }
 
   answersC() {
 	console.log("Du ska ha en vallhund");
-	<ResultsContainer result="vallhund" />
+	return ( <ResultsContainer result="vallhund" />
+	)
   }
 
   /**
