@@ -7,10 +7,8 @@ export interface FormState {
 	secondValue: string;
 	thirdValue: string
 	questionNumber: number;
-	isFormSubmit: boolean;
+	isFormFinished: boolean;
 	formResult: string;
-	isChecked: boolean
-
 }
 
 class Form extends React.Component<{}, FormState> {
