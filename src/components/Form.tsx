@@ -19,20 +19,19 @@ class Form extends React.Component<{}, FormState> {
 			firstValue: '',
 			secondValue: '',
 			thirdValue: '',
-			isFormSubmit: false,
+			isFormFinished: false,
 			formResult: '',
-			isChecked: false,
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
 	}
 
 	/** 
-   * Renders the form.
-   */
+   	 * Renders the form.
+   	 */
 	render() {
 		return (
-			this.state.isFormSubmit ?
+			this.state.isFormFinished ?
 				<ResultsContainer result={this.state.formResult} /> :
 				<form onSubmit={(
 					event: React.FormEvent<HTMLFormElement>) => {
@@ -52,8 +51,8 @@ class Form extends React.Component<{}, FormState> {
 	/**
 	 * This function handles argument q and compares it to all question statements. 
 	 * Returns the correct question.
-	 * @param q
-	 * @returns
+	 * @param q The question index as number.
+	 * @returns HTML-element with question and input fields.
 	 */
 	questionParse(q: number) {
 		if (q == 1) {
@@ -97,7 +96,6 @@ class Form extends React.Component<{}, FormState> {
 				</div>
 			);
 		}
-
 		if (q == 2) {
 			return (
 				<div className="formQuestions">
@@ -142,7 +140,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 3) {
 			return (
-				<div className="formQuestions">
+				<div className="formQuestions"> 
 					<h2>Do you like dawgs?</h2>
 					<div>
 						<input
@@ -185,9 +183,9 @@ class Form extends React.Component<{}, FormState> {
 		return null;
 	}
 
-	/*
-   * Function created for handling selected answers in form
-   */
+	/**
+   	 * Function created for handling selected answers in form
+   	 */
 	handleResult() {
 		let A = 0;
 		let B = 0;
@@ -207,9 +205,9 @@ class Form extends React.Component<{}, FormState> {
 
 	/**
 	 * Function created for counting result in form
-	 * @param A 
-	 * @param B 
-	 * @param C 
+	 * @param A input value A
+	 * @param B input value B
+	 * @param C input value C
 	 */
 	countResult(A: number, B: number, C: number) {
 		if (A > B && A > C) {
@@ -225,8 +223,8 @@ class Form extends React.Component<{}, FormState> {
 	}
 
 	/**
-   * Functions for showing result
-   */
+   	 * Functions for showing result
+   	 */
 	answersA() {
 		console.log("En sällskapshunds skulle passa dig");
 		this.setState({
@@ -269,29 +267,34 @@ class Form extends React.Component<{}, FormState> {
 		}
 	}
 
+
 	/**
-	 * Void is not assignable to onSubmit which expects a function.
 	 * When button "next" is pressed, onSubmit is executed.
 	 * If questionNumber is out of bounds, the form is finished.
-	 * !!!More documentation required!!! (Emma?, Jonte?)
+	 * If any radio button has been checked, it saves the value.
+	 * If conditions above have not been met, show error pop-up.
+	 * @param inputs All currently rendered radio button inputs.
+	 * @param event Submit event from form, only used to prevent page refresh.
 	 */
-	onSubmit = (inputs: NodeListOf<HTMLInputElement>, e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
+	onSubmit = (inputs: NodeListOf<HTMLInputElement>, event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
 
 		const { firstValue, secondValue, thirdValue } = this.state;
 
+		// Checks if last question has been submitted
 		if (this.state.thirdValue != "") {
 			localStorage.setItem('firstValue', firstValue);
 			localStorage.setItem('secondValue', secondValue);
 			localStorage.setItem('thirdValue', thirdValue);
 
 			this.setState({
-				isFormSubmit: true
+				isFormFinished: true
 			});
 
 			this.handleResult();
 
-		} else if (Array.from(inputs).some(input => input.checked == true)) {
+		} // Checks if any radio button is checked in form is.
+		else if (Array.from(inputs).some(input => input.checked == true)) {
 			localStorage.setItem('firstValue', firstValue);
 			localStorage.setItem('secondValue', secondValue);
 			localStorage.setItem('thirdValue', thirdValue);
@@ -300,7 +303,7 @@ class Form extends React.Component<{}, FormState> {
 				questionNumber: this.state.questionNumber + 1
 			});
 		} else {
-			console.log("something went wrong.", this.state.isChecked);
+			console.log("something went wrong.");
 		}
 	};
 
