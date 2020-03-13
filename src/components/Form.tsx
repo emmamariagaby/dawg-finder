@@ -223,9 +223,8 @@ class Form extends React.Component<{}, FormState> {
 			this.answersC()	
 		}
 		else {
-			this.answersA() 
-			this.answersB()
-			this.answersC()
+			console.log("alla hundar passar dig")
+			this.answersABC()
 		}
 	}
 
@@ -233,7 +232,7 @@ class Form extends React.Component<{}, FormState> {
    * Functions for showing result
    */
   answersA() {
-	console.log("Du ska ha en sällskapshund");
+	console.log("En sällskapshunds skulle passa dig");
 	this.setState({
 		formResult: "sällskapshund"
 	});
@@ -241,17 +240,24 @@ class Form extends React.Component<{}, FormState> {
   }
 
   answersB() {
-	console.log("Du ska ha en jakthund");
+	console.log("En jakthund skulle passa dig");
 	this.setState({
 		formResult: "jakthund"
 	});
   }
 
   answersC() {
-	console.log("Du ska ha en vallhund");
+	console.log("En vallhund skulle passa dig");
 	this.setState({
 		formResult: "vallhund"
 	});
+}
+
+	answersABC() {
+		console.log("Alla hundraser passar dig");
+		this.setState({
+			formResult: "hundraser"
+		});
 }
 
   /**
