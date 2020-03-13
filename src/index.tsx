@@ -19,6 +19,7 @@ import Button from "./components/Button";
 import Container from "./components/Container";
 import ResultsContainer from "./components/ResultsContainer";
 
+import "./styles/main.css"
 // import ResultsContainer from "./components/ResultsContainer";
 // import {FormRender} from "./components/Form";
 
@@ -26,7 +27,7 @@ import ResultsContainer from "./components/ResultsContainer";
 ReactDOM.render(
  
     <Router>
-      <div>
+      <div className="screen">
         <nav>
           <ul>
             <li>
