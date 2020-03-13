@@ -31,16 +31,16 @@ ReactDOM.render(
         <nav>
           <ul>
             <li>
-              <Link to="/Home">Home</Link>
+              <Link to="/home">Home</Link>
             </li>
              <li>
-              <Link to="/Form">Form</Link>
+              <Link to="/form">Form</Link>
             </li>
             <li>
               <Link to="/results">About</Link>
             </li>
             <li>
-              <Link to="/DogScreen">DogImages</Link>
+              <Link to="/dogscreen">DogImages</Link>
             </li>
             <li>
               <Link to="/footer">Users</Link>
@@ -51,16 +51,16 @@ ReactDOM.render(
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/Home">
+          <Route path="/home">
             <Home />
           </Route>
-           <Route path="/Form">
+           <Route path="/form">
             <FormScreen />
           </Route>
           <Route path="/results">
             <ResultScreen />
           </Route>
-          <Route path="/DogScreen">
+          <Route path="/dogscreen">
             <DogScreen />
           </Route>
           <Route path="/footer">

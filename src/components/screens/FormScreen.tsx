@@ -7,7 +7,7 @@ import Button from "../Button";
 import Footer from "../Footer";
 
  /** 
- * Form kommer fram när containern är färdig. Just nu syns inte form alls om man inte flyttar den ut ur "container"
+ * 
  *
  */
 class FormScreen extends React.Component {
@@ -18,9 +18,7 @@ render() {
         <Header />
         <Container>
             <Form />
-            <Button />
-            <Button />
-            <Button />
+            <Button to='/home'>Home</Button>
         </Container>
         <Footer />
         </>
