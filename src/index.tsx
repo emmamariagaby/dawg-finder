@@ -31,7 +31,7 @@ ReactDOM.render(
         <nav>
           <ul>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
              <li>
               <Link to="/form">Form</Link>
@@ -51,9 +51,6 @@ ReactDOM.render(
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
            <Route path="/form">
             <FormScreen />
           </Route>
@@ -65,6 +62,9 @@ ReactDOM.render(
           </Route>
           <Route path="/footer">
             <Footer />
+          </Route>
+           <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
