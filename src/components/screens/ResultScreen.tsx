@@ -16,7 +16,8 @@ render() {
         <Header />
         <Container>
             <ResultsContainer result="jakt" />
-            <Button />
+            <Button to='/form'>Do the test again!</Button>
+            <Button to='/dogscreen'>Dog Page</Button>
         </Container>
         <Footer />
         </>

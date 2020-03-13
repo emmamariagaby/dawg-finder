@@ -12,8 +12,8 @@ render() {
         <>
         <Header />
         <Container>
-            <Button />
-            <Button />
+            <Button to='/form'>Form</Button>
+            <Button to='/dogscreen'>Dog Page</Button>
         </Container>
         <Footer />
         </>
