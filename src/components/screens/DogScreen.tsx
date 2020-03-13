@@ -16,7 +16,7 @@ render() {
         <Header />
         <Container>
             {/* <DogImages /> */}
-            <Button />
+             <Button to='/home'>Home</Button>
         </Container>
         <Footer />
         </>
