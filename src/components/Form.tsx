@@ -1,11 +1,7 @@
 import * as React from 'react';
 
-import ResultForm from './ResultForm'
 import ResultsContainer from "./ResultsContainer";
 
-import "../styles/main.css"
-
-import ResultsContainer from './ResultsContainer';
 export interface FormState {
 	firstValue: string;
 	secondValue: string;
@@ -13,7 +9,8 @@ export interface FormState {
 	questionNumber: number;
 	isFormSubmit: boolean;
 	formResult: string;
-	
+	isChecked: boolean
+
 }
 
 class Form extends React.Component<{}, FormState> {
@@ -26,6 +23,7 @@ class Form extends React.Component<{}, FormState> {
 			thirdValue: '',
 			isFormSubmit: false,
 			formResult: '',
+			isChecked: false,
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
@@ -36,27 +34,29 @@ class Form extends React.Component<{}, FormState> {
    */
 	render() {
 		return (
-			<form onSubmit={this.onSubmit}>
-				{this.questionParse(this.state.questionNumber)}
+			this.state.isFormSubmit ?
+				<ResultsContainer result={this.state.formResult} /> :
+				<form onSubmit={(
+					event: React.FormEvent<HTMLFormElement>) => {
+					this.onSubmit(document.querySelectorAll('input'), event)
+				}}>
+					{this.questionParse(this.state.questionNumber)}
+					<div className="rowButtons">
+						{this.state.questionNumber == 1 ? null :
+							<button type="button" onClick={() => this.previousQuestion()}>Previous</button>}
 
-				<div className="rowButtons">
-					<button type="button" onClick={() => this.previousQuestion()}>
-						Previous
-					</button>
+						<button type="submit">Next</button>
+					</div>
+				</form>
+		);
+	}
 
-				<button type="submit">Next</button>	
-				 {this.state.isFormSubmit ? <ResultsContainer result={this.state.formResult} /> : null}	
-				
-			</div>
-		</form>
-		
-	);
-}
-
-  /**
-   * This function handles argument q and compares it to all question statements. 
-   * Returns the correct question.
-   */
+	/**
+	 * This function handles argument q and compares it to all question statements. 
+	 * Returns the correct question.
+	 * @param q
+	 * @returns
+	 */
 	questionParse(q: number) {
 		if (q == 1) {
 			return (
@@ -191,80 +191,76 @@ class Form extends React.Component<{}, FormState> {
    * Function created for handling selected answers in form
    */
 	handleResult() {
-
 		let A = 0;
 		let B = 0;
 		let C = 0;
-
 		Object.getOwnPropertyNames(this.state).map(
-			(answer) => { 
-				console.log()
-			if (this.state[answer] === 'A') {
-				A++ 	
-			} 
-			else if (this.state[answer] === 'B') {
-				B++
-			} else if (this.state[answer] === 'C') {
-				C++
-			}}) 
-			this.countResult(A, B, C)
+			answer => {
+				if (this.state[answer] === 'A') {
+					A++;
+				} else if (this.state[answer] === 'B') {
+					B++;
+				} else if (this.state[answer] === 'C') {
+					C++;
+				}
+			})
+		this.countResult(A, B, C)
 	}
 
-	/** 
-   * Function created for counting result in form
-   */
-	countResult(A, B, C) {
-		if (A>B && A>C) {
-		this.answersA()	
-		}
-		else if (B>A && B>C) {
-			this.answersB()	
-		}
-		else if (C>A && C>B) {
-			this.answersC()	
-		}
-		else {
+	/**
+	 * Function created for counting result in form
+	 * @param A 
+	 * @param B 
+	 * @param C 
+	 */
+	countResult(A: number, B: number, C: number) {
+		if (A > B && A > C) {
+			this.answersA();
+		} else if (B > A && B > C) {
+			this.answersB();
+		} else if (C > A && C > B) {
+			this.answersC();
+		} else {
 			console.log("alla hundar passar dig")
-			this.answersABC()
+			this.answersABC();
 		}
 	}
 
 	/**
    * Functions for showing result
    */
-  answersA() {
-	console.log("En sällskapshunds skulle passa dig");
-	this.setState({
-		formResult: "sällskapshund"
-	});
+	answersA() {
+		console.log("En sällskapshunds skulle passa dig");
+		this.setState({
+			formResult: "sällskapshund"
+		});
+	}
 
-  }
+	answersB() {
+		console.log("En jakthund skulle passa dig");
+		this.setState({
+			formResult: "jakthund"
+		});
+	}
 
-  answersB() {
-	console.log("En jakthund skulle passa dig");
-	this.setState({
-		formResult: "jakthund"
-	});
-  }
-
-  answersC() {
-	console.log("En vallhund skulle passa dig");
-	this.setState({
-		formResult: "vallhund"
-	});
-}
+	answersC() {
+		console.log("En vallhund skulle passa dig");
+		this.setState({
+			formResult: "vallhund"
+		});
+	}
 
 	answersABC() {
 		console.log("Alla hundraser passar dig");
 		this.setState({
 			formResult: "hundraser"
 		});
-}
+	}
 
-  /**
-   * Checks questionNumber for invalid value.
-   * Decrements the state questionNumber by 1.
-   */
+	/**
+	 * Checks questionNumber for invalid value.
+	 * Decrements the state questionNumber by 1.
+	 */
 	previousQuestion() {
 		if (this.state.questionNumber == 1) {
 			alert('Nu blev det fel!');
@@ -275,45 +271,44 @@ class Form extends React.Component<{}, FormState> {
 		}
 	}
 
-  /**
-   * Void is not assignable to onSubmit which expects a function.
-   * When button "next" is pressed, onSubmit is executed.
-   * If questionNumber is out of bounds, the form is finished.
-   * !!!More documentation required!!! (Emma?, Jonte?)
-   */
-	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	/**
+	 * Void is not assignable to onSubmit which expects a function.
+	 * When button "next" is pressed, onSubmit is executed.
+	 * If questionNumber is out of bounds, the form is finished.
+	 * !!!More documentation required!!! (Emma?, Jonte?)
+	 */
+	onSubmit = (inputs: NodeListOf<HTMLInputElement>, e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		const { firstValue, secondValue, thirdValue } = this.state;
+
 		if (this.state.thirdValue != "") {
-			const { firstValue } = this.state;
 			localStorage.setItem('firstValue', firstValue);
-			const { secondValue } = this.state;
 			localStorage.setItem('secondValue', secondValue);
-			const { thirdValue } = this.state;
 			localStorage.setItem('thirdValue', thirdValue);
+
 			this.setState({
-				questionNumber: this.state.questionNumber,
 				isFormSubmit: true
 			});
-			console.log(this.state);
-			this.handleResult()
-			e.preventDefault();
-		} else {
-			e.preventDefault();
-			console.log(this.state);
-			const { firstValue } = this.state;
+
+			this.handleResult();
+
+		} else if (Array.from(inputs).some(input => input.checked == true)) {
 			localStorage.setItem('firstValue', firstValue);
-			const { secondValue } = this.state;
 			localStorage.setItem('secondValue', secondValue);
-			const { thirdValue } = this.state;
 			localStorage.setItem('thirdValue', thirdValue);
+
 			this.setState({
 				questionNumber: this.state.questionNumber + 1
 			});
+		} else {
+			console.log("something went wrong.", this.state.isChecked);
 		}
 	};
 
-  /**
-   * Event handlers for each question in form
-   */
+	/**
+	 * Event handlers for each question in form
+	 */
 	onRadioChangeFirst = (e: React.ChangeEvent<HTMLInputElement>) => {
 		this.setState({
 			firstValue: e.target.value
@@ -326,14 +321,11 @@ class Form extends React.Component<{}, FormState> {
 		});
 	};
 
-		onRadioChangeThird = (e: React.ChangeEvent<HTMLInputElement>) => {
-			this.setState({
-				thirdValue: e.target.value
-			});
+	onRadioChangeThird = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			thirdValue: e.target.value
+		});
 	};
 }
- 
-// export const FormRender: React.FC<FormState> = () => {
-//     return this.render();
-// }
+
 export default Form;
