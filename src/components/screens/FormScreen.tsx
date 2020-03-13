@@ -18,7 +18,7 @@ render() {
         <Header />
         <Container>
             <Form />
-            <Button to='/home'>Home</Button>
+            <Button to="/">Home</Button>
         </Container>
         <Footer />
         </>
