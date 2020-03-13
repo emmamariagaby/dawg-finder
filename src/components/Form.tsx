@@ -5,7 +5,6 @@ import ResultsContainer from "./ResultsContainer";
 
 import "../styles/main.css"
 
-import ResultsContainer from './ResultsContainer';
 export interface FormState {
 	firstValue: string;
 	secondValue: string;
