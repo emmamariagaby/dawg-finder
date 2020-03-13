@@ -1,8 +1,10 @@
 import * as React from 'react';
 
 import ResultForm from './ResultForm'
+import ResultsContainer from "./ResultsContainer";
 
 import "../styles/main.css"
+
 import ResultsContainer from './ResultsContainer';
 export interface FormState {
 	firstValue: string;
@@ -10,6 +12,7 @@ export interface FormState {
 	thirdValue: string
 	questionNumber: number;
 	isFormSubmit: boolean;
+	formResult: string;
 	
 }
 
@@ -21,7 +24,8 @@ class Form extends React.Component<{}, FormState> {
 			firstValue: '',
 			secondValue: '',
 			thirdValue: '',
-			isFormSubmit: false
+			isFormSubmit: false,
+			formResult: '',
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
@@ -40,13 +44,14 @@ class Form extends React.Component<{}, FormState> {
 						Previous
 					</button>
 
-					<button type="submit">Next</button>
-				</div>
-				{/* {this.state.isFormSubmit ? <ResultsContainer result="jakt" /> : null} */}
-			</form>
-
-		);
-	}
+				<button type="submit">Next</button>	
+				 {this.state.isFormSubmit ? <ResultsContainer result={this.state.formResult} /> : null}	
+				
+			</div>
+		</form>
+		
+	);
+}
 
   /**
    * This function handles argument q and compares it to all question statements. 
@@ -195,14 +200,11 @@ class Form extends React.Component<{}, FormState> {
 			(answer) => { 
 				console.log()
 			if (this.state[answer] === 'A') {
-				console.log('här är A')
 				A++ 	
 			} 
 			else if (this.state[answer] === 'B') {
-				console.log('här är B')
 				B++
 			} else if (this.state[answer] === 'C') {
-				console.log('här var ett C')
 				C++
 			}}) 
 			this.countResult(A, B, C)
@@ -211,21 +213,53 @@ class Form extends React.Component<{}, FormState> {
 	/** 
    * Function created for counting result in form
    */
-
 	countResult(A, B, C) {
 		if (A>B && A>C) {
-		console.log('A', A)
+		this.answersA()	
 		}
 		else if (B>A && B>C) {
-			console.log('B', B);	
+			this.answersB()	
 		}
 		else if (C>A && C>B) {
-			console.log('C', C);	
+			this.answersC()	
 		}
 		else {
-			console.log('alla hundar passar dig')
+			console.log("alla hundar passar dig")
+			this.answersABC()
 		}
 	}
+
+	/**
+   * Functions for showing result
+   */
+  answersA() {
+	console.log("En sällskapshunds skulle passa dig");
+	this.setState({
+		formResult: "sällskapshund"
+	});
+
+  }
+
+  answersB() {
+	console.log("En jakthund skulle passa dig");
+	this.setState({
+		formResult: "jakthund"
+	});
+  }
+
+  answersC() {
+	console.log("En vallhund skulle passa dig");
+	this.setState({
+		formResult: "vallhund"
+	});
+}
+
+	answersABC() {
+		console.log("Alla hundraser passar dig");
+		this.setState({
+			formResult: "hundraser"
+		});
+}
 
   /**
    * Checks questionNumber for invalid value.
