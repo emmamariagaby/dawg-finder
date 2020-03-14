@@ -36,7 +36,6 @@ class Form extends React.Component<{}, FormState> {
 			ninthValue: '',
 			tenthValue: '',
 			eleventhValue: '',
-			isFormSubmit: false,
 			isFormFinished: false,
 
 			formResult: '',
@@ -159,342 +158,342 @@ class Form extends React.Component<{}, FormState> {
 				</div>
 			);
 		}
-	if (q == 3) {
-		return (
-			<div className="formQuestions">
-				<h2>What energy do you prefer?</h2>
-				<div>
-					<input
-						type="radio"
-						name="energy"
-						checked={this.state.thirdValue === "A"}
-						id="Low"
-						onChange={this.onRadioChangeThird}
-						value="A"
-					/>
-					<label htmlFor="Low">Low </label>
-				</div>
+		if (q == 3) {
+			return (
+				<div className="formQuestions">
+					<h2>What energy do you prefer?</h2>
+					<div>
+						<input
+							type="radio"
+							name="energy"
+							checked={this.state.thirdValue === "A"}
+							id="Low"
+							onChange={this.onRadioChangeThird}
+							value="A"
+						/>
+						<label htmlFor="Low">Low </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="energy"
-						checked={this.state.thirdValue === "B"}
-						id="Medium"
-						onChange={this.onRadioChangeThird}
-						value="B"
-					/>
-					<label htmlFor="Medium">Medium </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="energy"
+							checked={this.state.thirdValue === "B"}
+							id="Medium"
+							onChange={this.onRadioChangeThird}
+							value="B"
+						/>
+						<label htmlFor="Medium">Medium </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="energy"
-						checked={this.state.thirdValue === 'C'}
-						id="High"
-						onChange={this.onRadioChangeThird}
-						value="C"
-					/>
-					<label htmlFor="High">High </label>
+					<div>
+						<input
+							type="radio"
+							name="energy"
+							checked={this.state.thirdValue === 'C'}
+							id="High"
+							onChange={this.onRadioChangeThird}
+							value="C"
+						/>
+						<label htmlFor="High">High </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
-	if (q == 4) {
-		return (
-			<div className="formQuestions">
-				<h2>Do you want a cuddle buddy?</h2>
-				<div>
-					<input
-						type="radio"
-						name="cuddle"
-						checked={this.state.fourthValue === "A"}
-						id="Yes would love that"
-						onChange={this.onRadioChangeFourth}
-						value="A"
-					/>
-					<label htmlFor="Yes would love that">Yes would love that </label>
-				</div>
+			);
+		}
+		if (q == 4) {
+			return (
+				<div className="formQuestions">
+					<h2>Do you want a cuddle buddy?</h2>
+					<div>
+						<input
+							type="radio"
+							name="cuddle"
+							checked={this.state.fourthValue === "A"}
+							id="Yes would love that"
+							onChange={this.onRadioChangeFourth}
+							value="A"
+						/>
+						<label htmlFor="Yes would love that">Yes would love that </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="cuddle"
-						checked={this.state.fourthValue === "B"}
-						id="No thanks, I’m independent"
-						onChange={this.onRadioChangeFourth}
-						value="B"
-					/>
-					<label htmlFor="No thanks, I’m independent">No thanks, I’m independent </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="cuddle"
+							checked={this.state.fourthValue === "B"}
+							id="No thanks, I’m independent"
+							onChange={this.onRadioChangeFourth}
+							value="B"
+						/>
+						<label htmlFor="No thanks, I’m independent">No thanks, I’m independent </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="cuddle"
-						checked={this.state.fourthValue === 'C'}
-						id="Doesn’t matter"
-						onChange={this.onRadioChangeFourth}
-						value="C"
-					/>
-					<label htmlFor="Doesn’t matter">Doesn’t matter </label>
+					<div>
+						<input
+							type="radio"
+							name="cuddle"
+							checked={this.state.fourthValue === 'C'}
+							id="Doesn’t matter"
+							onChange={this.onRadioChangeFourth}
+							value="C"
+						/>
+						<label htmlFor="Doesn’t matter">Doesn’t matter </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
-	if (q == 5) {
-		return (
-			<div className="formQuestions">
-				<h2>How is your living area?</h2>
-				<div>
-					<input
-						type="radio"
-						name="living"
-						checked={this.state.fifthValue === "A"}
-						id="Small space living"
-						onChange={this.onRadioChangeFifth}
-						value="A"
-					/>
-					<label htmlFor="Small space living">Small space living </label>
-				</div>
+			);
+		}
+		if (q == 5) {
+			return (
+				<div className="formQuestions">
+					<h2>How is your living area?</h2>
+					<div>
+						<input
+							type="radio"
+							name="living"
+							checked={this.state.fifthValue === "A"}
+							id="Small space living"
+							onChange={this.onRadioChangeFifth}
+							value="A"
+						/>
+						<label htmlFor="Small space living">Small space living </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="living"
-						checked={this.state.fifthValue === "B"}
-						id="Not small, but not big. But the nature is around my corner"
-						onChange={this.onRadioChangeFifth}
-						value="B"
-					/>
-					<label htmlFor="Not small, but not big. But the nature is around my corner">Not small, but not big. But the nature is around my corner </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="living"
+							checked={this.state.fifthValue === "B"}
+							id="Not small, but not big. But the nature is around my corner"
+							onChange={this.onRadioChangeFifth}
+							value="B"
+						/>
+						<label htmlFor="Not small, but not big. But the nature is around my corner">Not small, but not big. But the nature is around my corner </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="living"
-						checked={this.state.fifthValue === 'C'}
-						id="Big space living inside and out"
-						onChange={this.onRadioChangeFifth}
-						value="C"
-					/>
-					<label htmlFor="Big space living inside and out">Big space living inside and out </label>
+					<div>
+						<input
+							type="radio"
+							name="living"
+							checked={this.state.fifthValue === 'C'}
+							id="Big space living inside and out"
+							onChange={this.onRadioChangeFifth}
+							value="C"
+						/>
+						<label htmlFor="Big space living inside and out">Big space living inside and out </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
-	if (q == 6) {
-		return (
-			<div className="formQuestions">
-				<h2>Where do you live?</h2>
-				<div>
-					<input
-						type="radio"
-						name="live"
-						checked={this.state.sixthValue === "A"}
-						id="In the city or the suburbs"
-						onChange={this.onRadioChangeSixth}
-						value="A"
-					/>
-					<label htmlFor="In the city or the suburbs">In the city or the suburbs </label>
-				</div>
-	
-				<div>
-					<input
-						type="radio"
-						name="live"
-						checked={this.state.sixthValue === "B"}
-						id="I'm living in the middle of the woods"
-						onChange={this.onRadioChangeSixth}
-						value="B"
-					/>
-					<label htmlFor="I'm living in the middle of the woods">I'm living in the middle of the woods </label>
-				</div>
-	
-				<div>
-					<input
-						type="radio"
-						name="live"
-						checked={this.state.sixthValue === 'C'}
-						id="At the country side"
-						onChange={this.onRadioChangeSixth}
-						value="C"
-					/>
-					<label htmlFor="At the country side">At the country side </label>
-				</div>
-			</div>
-		);
-	}
-	if (q == 7) {
-		return (
-			<div className="formQuestions">
-				<h2>Do you have a yard?</h2>
-				<div>
-					<input
-						type="radio"
-						name="yard"
-						checked={this.state.seventhValue === "A"}
-						id="Yes a small one, or no yard at all"
-						onChange={this.onRadioChangeSeventh}
-						value="A"
-					/>
-					<label htmlFor="Yes a small one, or no yard at all">Yes a small one, or no yard at all </label>
-				</div>
+			);
+		}
+		if (q == 6) {
+			return (
+				<div className="formQuestions">
+					<h2>Where do you live?</h2>
+					<div>
+						<input
+							type="radio"
+							name="live"
+							checked={this.state.sixthValue === "A"}
+							id="In the city or the suburbs"
+							onChange={this.onRadioChangeSixth}
+							value="A"
+						/>
+						<label htmlFor="In the city or the suburbs">In the city or the suburbs </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="yard"
-						checked={this.state.seventhValue === "B"}
-						id="Yes the woods is my yard"
-						onChange={this.onRadioChangeSeventh}
-						value="B"
-					/>
-					<label htmlFor="Yes the woods is my yard">Yes the woods is my yard </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="live"
+							checked={this.state.sixthValue === "B"}
+							id="I'm living in the middle of the woods"
+							onChange={this.onRadioChangeSixth}
+							value="B"
+						/>
+						<label htmlFor="I'm living in the middle of the woods">I'm living in the middle of the woods </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="yard"
-						checked={this.state.seventhValue === 'C'}
-						id="My farm is my yard"
-						onChange={this.onRadioChangeSeventh}
-						value="C"
-					/>
-					<label htmlFor="My farm is my yard">My farm is my yard </label>
+					<div>
+						<input
+							type="radio"
+							name="live"
+							checked={this.state.sixthValue === 'C'}
+							id="At the country side"
+							onChange={this.onRadioChangeSixth}
+							value="C"
+						/>
+						<label htmlFor="At the country side">At the country side </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
-	if (q == 8) {
-		return (
-			<div className="formQuestions">
-				<h2>How much daily exercise will you give your dog?</h2>
-				<div>
-					<input
-						type="radio"
-						name="exercise"
-						checked={this.state.eightValue === "A"}
-						id="Almost one hour every day or more, obedience is fun"
-						onChange={this.onRadioChangeEight}
-						value="A"
-					/>
-					<label htmlFor="Almost one hour every day or more, obedience is fun">Almost one hour every day or more, obedience is fun </label>
-				</div>
-	
-				<div>
-					<input
-						type="radio"
-						name="exercise"
-						checked={this.state.eightValue === "B"}
-						id="A lot of exercise, mostly related to hunting or search work"
-						onChange={this.onRadioChangeEight}
-						value="B"
-					/>
-					<label htmlFor="A lot of exercise, mostly related to hunting or search work">A lot of exercise, mostly related to hunting or search work </label>
-				</div>
-	
-				<div>
-					<input
-						type="radio"
-						name="exercise"
-						checked={this.state.eightValue === 'C'}
-						id="We are going to focus on specific training and work every week related to herding"
-						onChange={this.onRadioChangeEight}
-						value="C"
-					/>
-					<label htmlFor="We are going to focus on specific training and work every week related to herding">We are going to focus on specific training and work every week related to herding </label>
-				</div>
-			</div>
-		);
-	}
-	if (q == 9) {
-		return (
-			<div className="formQuestions">
-				<h2>What dog size do you prefer?</h2>
-				<div>
-					<input
-						type="radio"
-						name="size"
-						checked={this.state.ninthValue === "A"}
-						id="Small size"
-						onChange={this.onRadioChangeNinth}
-						value="A"
-					/>
-					<label htmlFor="Small size">Small size </label>
-				</div>
+			);
+		}
+		if (q == 7) {
+			return (
+				<div className="formQuestions">
+					<h2>Do you have a yard?</h2>
+					<div>
+						<input
+							type="radio"
+							name="yard"
+							checked={this.state.seventhValue === "A"}
+							id="Yes a small one, or no yard at all"
+							onChange={this.onRadioChangeSeventh}
+							value="A"
+						/>
+						<label htmlFor="Yes a small one, or no yard at all">Yes a small one, or no yard at all </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="size"
-						checked={this.state.ninthValue === "B"}
-						id="Medium size"
-						onChange={this.onRadioChangeNinth}
-						value="B"
-					/>
-					<label htmlFor="Medium size">Medium size </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="yard"
+							checked={this.state.seventhValue === "B"}
+							id="Yes the woods is my yard"
+							onChange={this.onRadioChangeSeventh}
+							value="B"
+						/>
+						<label htmlFor="Yes the woods is my yard">Yes the woods is my yard </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="size"
-						checked={this.state.ninthValue === 'C'}
-						id="Big size"
-						onChange={this.onRadioChangeNinth}
-						value="C"
-					/>
-					<label htmlFor="Big size">Big size </label>
+					<div>
+						<input
+							type="radio"
+							name="yard"
+							checked={this.state.seventhValue === 'C'}
+							id="My farm is my yard"
+							onChange={this.onRadioChangeSeventh}
+							value="C"
+						/>
+						<label htmlFor="My farm is my yard">My farm is my yard </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
-	if (q == 10) {
-		return (
-			<div className="formQuestions">
-				<h2>What dog coat do you prefer?</h2>
-				<div>
-					<input
-						type="radio"
-						name="coat"
-						checked={this.state.tenthValue === "A"}
-						id="Naked"
-						onChange={this.onRadioChangeTenth}
-						value="A"
-					/>
-					<label htmlFor="Naked">Naked </label>
-				</div>
+			);
+		}
+		if (q == 8) {
+			return (
+				<div className="formQuestions">
+					<h2>How much daily exercise will you give your dog?</h2>
+					<div>
+						<input
+							type="radio"
+							name="exercise"
+							checked={this.state.eightValue === "A"}
+							id="Almost one hour every day or more, obedience is fun"
+							onChange={this.onRadioChangeEight}
+							value="A"
+						/>
+						<label htmlFor="Almost one hour every day or more, obedience is fun">Almost one hour every day or more, obedience is fun </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="coat"
-						checked={this.state.tenthValue === "B"}
-						id="Short"
-						onChange={this.onRadioChangeTenth}
-						value="B"
-					/>
-					<label htmlFor="Short">Short </label>
-				</div>
+					<div>
+						<input
+							type="radio"
+							name="exercise"
+							checked={this.state.eightValue === "B"}
+							id="A lot of exercise, mostly related to hunting or search work"
+							onChange={this.onRadioChangeEight}
+							value="B"
+						/>
+						<label htmlFor="A lot of exercise, mostly related to hunting or search work">A lot of exercise, mostly related to hunting or search work </label>
+					</div>
 
-				<div>
-					<input
-						type="radio"
-						name="coat"
-						checked={this.state.tenthValue === 'C'}
-						id="Long"
-						onChange={this.onRadioChangeTenth}
-						value="C"
-					/>
-					<label htmlFor="Long">Long </label>
+					<div>
+						<input
+							type="radio"
+							name="exercise"
+							checked={this.state.eightValue === 'C'}
+							id="We are going to focus on specific training and work every week related to herding"
+							onChange={this.onRadioChangeEight}
+							value="C"
+						/>
+						<label htmlFor="We are going to focus on specific training and work every week related to herding">We are going to focus on specific training and work every week related to herding </label>
+					</div>
 				</div>
-			</div>
-		);
-	}
+			);
+		}
+		if (q == 9) {
+			return (
+				<div className="formQuestions">
+					<h2>What dog size do you prefer?</h2>
+					<div>
+						<input
+							type="radio"
+							name="size"
+							checked={this.state.ninthValue === "A"}
+							id="Small size"
+							onChange={this.onRadioChangeNinth}
+							value="A"
+						/>
+						<label htmlFor="Small size">Small size </label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							name="size"
+							checked={this.state.ninthValue === "B"}
+							id="Medium size"
+							onChange={this.onRadioChangeNinth}
+							value="B"
+						/>
+						<label htmlFor="Medium size">Medium size </label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							name="size"
+							checked={this.state.ninthValue === 'C'}
+							id="Big size"
+							onChange={this.onRadioChangeNinth}
+							value="C"
+						/>
+						<label htmlFor="Big size">Big size </label>
+					</div>
+				</div>
+			);
+		}
+		if (q == 10) {
+			return (
+				<div className="formQuestions">
+					<h2>What dog coat do you prefer?</h2>
+					<div>
+						<input
+							type="radio"
+							name="coat"
+							checked={this.state.tenthValue === "A"}
+							id="Naked"
+							onChange={this.onRadioChangeTenth}
+							value="A"
+						/>
+						<label htmlFor="Naked">Naked </label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							name="coat"
+							checked={this.state.tenthValue === "B"}
+							id="Short"
+							onChange={this.onRadioChangeTenth}
+							value="B"
+						/>
+						<label htmlFor="Short">Short </label>
+					</div>
+
+					<div>
+						<input
+							type="radio"
+							name="coat"
+							checked={this.state.tenthValue === 'C'}
+							id="Long"
+							onChange={this.onRadioChangeTenth}
+							value="C"
+						/>
+						<label htmlFor="Long">Long </label>
+					</div>
+				</div>
+			);
+		}
 		if (q == 11) {
 			return (
 				<div className="formQuestions">
@@ -624,16 +623,6 @@ class Form extends React.Component<{}, FormState> {
 		}
 	}
 
-  /**
-   * Void is not assignable to onSubmit which expects a function.
-   * When button "next" is pressed, onSubmit is executed.
-   * If questionNumber is out of bounds, the form is finished.
-   * !!!More documentation required!!! (Emma?, Jonte?)
-   */
-	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		if (this.state.eleventhValue != "") {
-			const { firstValue } = this.state;
-
 	/**
 	 * When button "next" is pressed, onSubmit is executed.
 	 * If questionNumber is out of bounds, the form is finished.
@@ -737,41 +726,41 @@ class Form extends React.Component<{}, FormState> {
 			fourthValue: e.target.value
 		});
 	};
-		onRadioChangeFifth = (e: React.ChangeEvent<HTMLInputElement>) => {
-			this.setState({
-				fifthValue: e.target.value
-			});
-		};
-			onRadioChangeSixth = (e: React.ChangeEvent<HTMLInputElement>) => {
-				this.setState({
-					sixthValue: e.target.value
-				});
-		};
-		onRadioChangeSeventh = (e: React.ChangeEvent<HTMLInputElement>) => {
-			this.setState({
-				seventhValue: e.target.value
-			});
-		};
-			onRadioChangeEight = (e: React.ChangeEvent<HTMLInputElement>) => {
-				this.setState({
-					eightValue: e.target.value
-				});
-			};
-				onRadioChangeNinth = (e: React.ChangeEvent<HTMLInputElement>) => {
-					this.setState({
-						ninthValue: e.target.value
-					});
-				};
-					onRadioChangeTenth = (e: React.ChangeEvent<HTMLInputElement>) => {
-						this.setState({
-							tenthValue: e.target.value
-						});
-				};
-				onRadioChangeEleventh = (e: React.ChangeEvent<HTMLInputElement>) => {
-					this.setState({
-						eleventhValue: e.target.value
-					});
-};
+	onRadioChangeFifth = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			fifthValue: e.target.value
+		});
+	};
+	onRadioChangeSixth = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			sixthValue: e.target.value
+		});
+	};
+	onRadioChangeSeventh = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			seventhValue: e.target.value
+		});
+	};
+	onRadioChangeEight = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			eightValue: e.target.value
+		});
+	};
+	onRadioChangeNinth = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			ninthValue: e.target.value
+		});
+	};
+	onRadioChangeTenth = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			tenthValue: e.target.value
+		});
+	};
+	onRadioChangeEleventh = (e: React.ChangeEvent<HTMLInputElement>) => {
+		this.setState({
+			eleventhValue: e.target.value
+		});
+	};
 }
 
 export default Form;
