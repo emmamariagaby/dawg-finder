@@ -5,14 +5,18 @@ import "../styles/main.css"
 export interface ContainerState {
 	windowWidth: number
 	windowHeight: number
+	fadeOut: boolean
 }
 
-class Container extends React.Component<{}, ContainerState> {
-	constructor(props) {
+export interface ContainerProps { }
+
+class Container extends React.Component<ContainerProps, ContainerState> {
+	constructor(props: ContainerProps) {
 		super(props);
 		this.state = {
 			windowWidth: 0,
 			windowHeight: 0,
+			fadeOut: false,
 		}
 
 		this.updateScreenSize = this.updateScreenSize.bind(this);
@@ -20,7 +24,7 @@ class Container extends React.Component<{}, ContainerState> {
 
 	render() {
 		return (
-			<div className={"container " + this.getClassName()}>
+			<div className={`container ${this.getClassName()}`}>
 				{this.props.children}
 			</div>
 		);
@@ -49,6 +53,11 @@ class Container extends React.Component<{}, ContainerState> {
 	}
 
 	componentWillUnmount() {
+		console.log("unmount");
+		
+		this.setState({
+			fadeOut: true
+		})
 		window.removeEventListener("resize", this.updateScreenSize);
 	}
 }

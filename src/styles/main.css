@@ -3,6 +3,7 @@
     --greenblue: #32A3AA;
     --white: #F8F7F3;
     --purple: #55143C;
+    --disabled: #BCC3C4;
 }
 
 *, *:before, *:after {
@@ -39,6 +40,10 @@ button {
 
 button:hover {
     background-color: var(--purple);
+}
+
+.buttonDisabled, .buttonDisabled:hover {
+    background-color: var(--disabled);
 }
 
 html, body {
@@ -187,14 +192,32 @@ label:after {
 
 .fadeInOut {
     opacity: 1;
-    animation: fadeInOut 5s ease;
+    animation: fadeInOut 4s ease;
+}
+
+.fadeIn {
+    animation: fadeIn 700ms ease;
+}
+
+.fadeOut {
+    animation: fadeOut 700ms ease;
 }
 
 @keyframes fadeInOut {
-    0%   { opacity:0; }
-    25%  { opacity:1; }
-    75%  { opacity:1; }
-    100% { opacity:0; }
+    0%   { opacity: 0; }
+    25%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 
