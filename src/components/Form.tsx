@@ -17,6 +17,7 @@ export interface FormState {
 	questionNumber: number;
 	isFormFinished: boolean;
 	formResult: string;
+	showEmptyInputWarning: boolean;
 }
 
 class Form extends React.Component<{}, FormState> {
@@ -39,6 +40,7 @@ class Form extends React.Component<{}, FormState> {
 			isFormFinished: false,
 
 			formResult: '',
+			showEmptyInputWarning: false,
 		};
 		this.questionParse = this.questionParse.bind(this);
 		this.previousQuestion = this.previousQuestion.bind(this);
@@ -56,10 +58,11 @@ class Form extends React.Component<{}, FormState> {
 					this.onSubmit(document.querySelectorAll('input'), event)
 				}}>
 					{this.questionParse(this.state.questionNumber)}
+					{this.state.showEmptyInputWarning ? <p className="errorPopup fadeInOut"><i>Woof!</i> Please answer before proceeding to the next question.</p>
+						: null}
 					<div className="rowButtons">
 						{this.state.questionNumber == 1 ? null :
 							<button type="button" onClick={() => this.previousQuestion()}>Previous</button>}
-
 						<button type="submit">Next</button>
 					</div>
 				</form>
@@ -698,7 +701,14 @@ class Form extends React.Component<{}, FormState> {
 				questionNumber: this.state.questionNumber + 1
 			});
 		} else {
-			console.log("something went wrong.");
+			this.setState({
+				showEmptyInputWarning: true,
+			})
+			setTimeout(() => {
+				this.setState({
+					showEmptyInputWarning: false
+				})
+			}, 4800);
 		}
 	};
 
