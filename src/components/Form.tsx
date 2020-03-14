@@ -82,7 +82,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="experience"
 							checked={this.state.firstValue === 'A'}
-							id="experience"
+							id="New to dogs"
 							onChange={this.onRadioChangeFirst}
 							value="A" />
 						<label htmlFor="New to dogs">New to dogs </label>
@@ -93,7 +93,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="experience"
 							checked={this.state.firstValue === 'B'}
-							id="experience"
+							id="Currently own a dog"
 							onChange={this.onRadioChangeFirst}
 							value="B"
 						/>
@@ -105,7 +105,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="experience"
 							checked={this.state.firstValue === "C"}
-							id="experience"
+							id="I'm very well-experienced with dogs"
 							onChange={this.onRadioChangeFirst}
 							value="C"
 						/>
@@ -124,7 +124,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="active"
 							checked={this.state.secondValue === "A"}
-							id="active"
+							id="Not very active"
 							onChange={this.onRadioChangeSecond}
 							value="A"
 						/>
@@ -136,7 +136,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="active"
 							checked={this.state.secondValue === "B"}
-							id="active"
+							id="Very active"
 							onChange={this.onRadioChangeSecond}
 							value="B"
 						/>
@@ -148,7 +148,7 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="active"
 							checked={this.state.secondValue === 'C'}
-							id="active"
+							id="I’m an athletic"
 							onChange={this.onRadioChangeSecond}
 							value="C"
 						/>
@@ -166,7 +166,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="energy"
 						checked={this.state.thirdValue === "A"}
-						id="energy"
+						id="Low"
 						onChange={this.onRadioChangeThird}
 						value="A"
 					/>
@@ -178,7 +178,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="energy"
 						checked={this.state.thirdValue === "B"}
-						id="energy"
+						id="Medium"
 						onChange={this.onRadioChangeThird}
 						value="B"
 					/>
@@ -190,7 +190,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="energy"
 						checked={this.state.thirdValue === 'C'}
-						id="energy"
+						id="High"
 						onChange={this.onRadioChangeThird}
 						value="C"
 					/>
@@ -208,7 +208,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="cuddle"
 						checked={this.state.fourthValue === "A"}
-						id="cuddle"
+						id="Yes would love that"
 						onChange={this.onRadioChangeFourth}
 						value="A"
 					/>
@@ -220,7 +220,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="cuddle"
 						checked={this.state.fourthValue === "B"}
-						id="cuddle"
+						id="No thanks, I’m independent"
 						onChange={this.onRadioChangeFourth}
 						value="B"
 					/>
@@ -232,7 +232,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="cuddle"
 						checked={this.state.fourthValue === 'C'}
-						id="cuddle"
+						id="Doesn’t matter"
 						onChange={this.onRadioChangeFourth}
 						value="C"
 					/>
@@ -250,7 +250,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="living"
 						checked={this.state.fifthValue === "A"}
-						id="living"
+						id="Small space living"
 						onChange={this.onRadioChangeFifth}
 						value="A"
 					/>
@@ -262,7 +262,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="living"
 						checked={this.state.fifthValue === "B"}
-						id="living"
+						id="Not small, but not big. But the nature is around my corner"
 						onChange={this.onRadioChangeFifth}
 						value="B"
 					/>
@@ -274,7 +274,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="living"
 						checked={this.state.fifthValue === 'C'}
-						id="living"
+						id="Big space living inside and out"
 						onChange={this.onRadioChangeFifth}
 						value="C"
 					/>
@@ -292,7 +292,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="live"
 						checked={this.state.sixthValue === "A"}
-						id="live"
+						id="In the city or the suburbs"
 						onChange={this.onRadioChangeSixth}
 						value="A"
 					/>
@@ -304,7 +304,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="live"
 						checked={this.state.sixthValue === "B"}
-						id="live"
+						id="I'm living in the middle of the woods"
 						onChange={this.onRadioChangeSixth}
 						value="B"
 					/>
@@ -316,7 +316,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="live"
 						checked={this.state.sixthValue === 'C'}
-						id="live"
+						id="At the country side"
 						onChange={this.onRadioChangeSixth}
 						value="C"
 					/>
@@ -334,7 +334,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="yard"
 						checked={this.state.seventhValue === "A"}
-						id="yard"
+						id="Yes a small one, or no yard at all"
 						onChange={this.onRadioChangeSeventh}
 						value="A"
 					/>
@@ -346,7 +346,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="yard"
 						checked={this.state.seventhValue === "B"}
-						id="yard"
+						id="Yes the woods is my yard"
 						onChange={this.onRadioChangeSeventh}
 						value="B"
 					/>
@@ -358,7 +358,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="yard"
 						checked={this.state.seventhValue === 'C'}
-						id="yard"
+						id="My farm is my yard"
 						onChange={this.onRadioChangeSeventh}
 						value="C"
 					/>
@@ -376,7 +376,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="exercise"
 						checked={this.state.eightValue === "A"}
-						id="exercise"
+						id="Almost one hour every day or more, obedience is fun"
 						onChange={this.onRadioChangeEight}
 						value="A"
 					/>
@@ -388,7 +388,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="exercise"
 						checked={this.state.eightValue === "B"}
-						id="exercise"
+						id="A lot of exercise, mostly related to hunting or search work"
 						onChange={this.onRadioChangeEight}
 						value="B"
 					/>
@@ -400,7 +400,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="exercise"
 						checked={this.state.eightValue === 'C'}
-						id="exercise"
+						id="We are going to focus on specific training and work every week related to herding"
 						onChange={this.onRadioChangeEight}
 						value="C"
 					/>
@@ -418,7 +418,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="size"
 						checked={this.state.ninthValue === "A"}
-						id="size"
+						id="Small size"
 						onChange={this.onRadioChangeNinth}
 						value="A"
 					/>
@@ -430,7 +430,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="size"
 						checked={this.state.ninthValue === "B"}
-						id="size"
+						id="Medium size"
 						onChange={this.onRadioChangeNinth}
 						value="B"
 					/>
@@ -442,7 +442,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="size"
 						checked={this.state.ninthValue === 'C'}
-						id="size"
+						id="Big size"
 						onChange={this.onRadioChangeNinth}
 						value="C"
 					/>
@@ -460,7 +460,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="coat"
 						checked={this.state.tenthValue === "A"}
-						id="coat"
+						id="Naked"
 						onChange={this.onRadioChangeTenth}
 						value="A"
 					/>
@@ -472,7 +472,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="coat"
 						checked={this.state.tenthValue === "B"}
-						id="coat"
+						id="Short"
 						onChange={this.onRadioChangeTenth}
 						value="B"
 					/>
@@ -484,7 +484,7 @@ class Form extends React.Component<{}, FormState> {
 						type="radio"
 						name="coat"
 						checked={this.state.tenthValue === 'C'}
-						id="coat"
+						id="Long"
 						onChange={this.onRadioChangeTenth}
 						value="C"
 					/>
@@ -502,11 +502,11 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="interest"
 							checked={this.state.eleventhValue === 'A'}
-							id="interest"
+							id="I have no special interest"
 							onChange={this.onRadioChangeEleventh}
 							value="A"
 						/>
-						<label htmlFor="I have no special interest.">I have no special interest. </label>
+						<label htmlFor="I have no special interest">I have no special interest. </label>
 					</div>
 
 					<div>
@@ -514,11 +514,11 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="interest"
 							checked={this.state.eleventhValue === 'B'}
-							id="interest"
+							id="I’m interested in hunting, search or rescue training"
 							onChange={this.onRadioChangeEleventh}
 							value="B"
 						/>
-						<label htmlFor="I’m interested in hunting, search or rescue training.">I’m interested in hunting, search or rescue training. </label>
+						<label htmlFor="I’m interested in hunting, search or rescue training">I’m interested in hunting, search or rescue training. </label>
 					</div>
 
 					<div>
@@ -526,11 +526,11 @@ class Form extends React.Component<{}, FormState> {
 							type="radio"
 							name="interest"
 							checked={this.state.eleventhValue === 'C'}
-							id="interest"
+							id="I’m interested in herding sheep and living the farm life"
 							onChange={this.onRadioChangeEleventh}
 							value="C"
 						/>
-						<label htmlFor="I’m interested in herding sheep and living the farm life.">I’m interested in herding sheep and living the farm life. </label>
+						<label htmlFor="I’m interested in herding sheep and living the farm life">I’m interested in herding sheep and living the farm life. </label>
 					</div>
 				</div>
 			);
@@ -633,7 +633,7 @@ class Form extends React.Component<{}, FormState> {
    * !!!More documentation required!!! (Emma?, Jonte?)
    */
 	onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		if (this.state.thirdValue != "") {
+		if (this.state.eleventhValue != "") {
 			const { firstValue } = this.state;
 			localStorage.setItem('firstValue', firstValue);
 			const { secondValue } = this.state;
