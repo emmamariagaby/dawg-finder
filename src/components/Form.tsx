@@ -634,28 +634,20 @@ class Form extends React.Component<{}, FormState> {
 	onSubmit = (inputs: NodeListOf<HTMLInputElement>, event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
-		const { firstValue, secondValue, thirdValue } = this.state;
+		const { firstValue, secondValue, thirdValue, fourthValue, fifthValue, sixthValue, seventhValue, eightValue, ninthValue, tenthValue, eleventhValue } = this.state;
 
 		// Checks if last question has been submitted
 		if (this.state.eleventhValue != "") {
 			localStorage.setItem('firstValue', firstValue);
 			localStorage.setItem('secondValue', secondValue);
 			localStorage.setItem('thirdValue', thirdValue);
-			const { fourthValue } = this.state;
 			localStorage.setItem('fourthValue', fourthValue);
-			const { fifthValue } = this.state;
 			localStorage.setItem('fifthValue', fifthValue);
-			const { sixthValue } = this.state;
 			localStorage.setItem('sixthValue', sixthValue);
-			const { seventhValue } = this.state;
 			localStorage.setItem('seventhdValue', seventhValue);
-			const { eightValue } = this.state;
 			localStorage.setItem('eightValue', eightValue);
-			const { ninthValue } = this.state;
 			localStorage.setItem('ninthValue', ninthValue);
-			const { tenthValue } = this.state;
 			localStorage.setItem('tenthValue', tenthValue);
-			const { eleventhValue } = this.state;
 			localStorage.setItem('eleventhValue', eleventhValue);
 
 			this.setState({
@@ -669,21 +661,13 @@ class Form extends React.Component<{}, FormState> {
 			localStorage.setItem('firstValue', firstValue);
 			localStorage.setItem('secondValue', secondValue);
 			localStorage.setItem('thirdValue', thirdValue);
-			const { fourthValue } = this.state;
 			localStorage.setItem('fourthValue', fourthValue);
-			const { fifthValue } = this.state;
 			localStorage.setItem('fifthValue', fifthValue);
-			const { sixthValue } = this.state;
 			localStorage.setItem('sixthValue', sixthValue);
-			const { seventhValue } = this.state;
 			localStorage.setItem('seventhdValue', seventhValue);
-			const { eightValue } = this.state;
 			localStorage.setItem('eightValue', eightValue);
-			const { ninthValue } = this.state;
 			localStorage.setItem('ninthValue', ninthValue);
-			const { tenthValue } = this.state;
 			localStorage.setItem('tenthValue', tenthValue);
-			const { eleventhValue } = this.state;
 			localStorage.setItem('eleventhValue', eleventhValue);
 
 			this.setState({
