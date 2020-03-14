@@ -3,6 +3,7 @@ import * as React from 'react';
 import ResultsContainer from "./ResultsContainer";
 
 export interface FormState {
+	questionNumber: number;
 	firstValue: string;
 	secondValue: string;
 	thirdValue: string;
@@ -14,7 +15,7 @@ export interface FormState {
 	ninthValue: string;
 	tenthValue: string;
 	eleventhValue: string;
-	questionNumber: number;
+	transition: string;
 	isFormFinished: boolean;
 	formResult: string;
 	showEmptyInputWarning: boolean;
@@ -36,8 +37,8 @@ class Form extends React.Component<{}, FormState> {
 			ninthValue: '',
 			tenthValue: '',
 			eleventhValue: '',
+			transition: "fadeIn",
 			isFormFinished: false,
-
 			formResult: '',
 			showEmptyInputWarning: false,
 		};
@@ -52,16 +53,15 @@ class Form extends React.Component<{}, FormState> {
 		return (
 			this.state.isFormFinished ?
 				<ResultsContainer result={this.state.formResult} /> :
-				<form onSubmit={(
-					event: React.FormEvent<HTMLFormElement>) => {
+				<form onSubmit={(event: React.FormEvent<HTMLFormElement>) => {
 					this.onSubmit(document.querySelectorAll('input'), event)
 				}}>
 					{this.questionParse(this.state.questionNumber)}
-					{this.state.showEmptyInputWarning ? <p className="errorPopup fadeInOut"><i>Woof!</i> Please answer before proceeding to the next question.</p>
+					{this.state.showEmptyInputWarning ?
+						<p className="errorPopup fadeInOut"><i>Woof!</i> Please answer before proceeding to the next question.</p>
 						: null}
 					<div className="rowButtons">
-						{this.state.questionNumber == 1 ? null :
-							<button type="button" onClick={() => this.previousQuestion()}>Previous</button>}
+						<button type="button" className={this.state.questionNumber == 1 ? "buttonDisabled" : ""} onClick={() => this.previousQuestion()}>Previous</button>
 						<button type="submit">Next</button>
 					</div>
 				</form>
@@ -77,7 +77,7 @@ class Form extends React.Component<{}, FormState> {
 	questionParse(q: number) {
 		if (q == 1) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>What is your experience with dogs?</h2>
 					<div>
 						<input
@@ -118,7 +118,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 2) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>How active are you?</h2>
 					<div>
 						<input
@@ -160,7 +160,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 3) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>What energy do you prefer?</h2>
 					<div>
 						<input
@@ -202,7 +202,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 4) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>Do you want a cuddle buddy?</h2>
 					<div>
 						<input
@@ -244,7 +244,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 5) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>How is your living area?</h2>
 					<div>
 						<input
@@ -286,7 +286,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 6) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>Where do you live?</h2>
 					<div>
 						<input
@@ -328,7 +328,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 7) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>Do you have a yard?</h2>
 					<div>
 						<input
@@ -370,7 +370,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 8) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>How much daily exercise will you give your dog?</h2>
 					<div>
 						<input
@@ -412,7 +412,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 9) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>What dog size do you prefer?</h2>
 					<div>
 						<input
@@ -454,7 +454,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 10) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>What dog coat do you prefer?</h2>
 					<div>
 						<input
@@ -496,7 +496,7 @@ class Form extends React.Component<{}, FormState> {
 		}
 		if (q == 11) {
 			return (
-				<div className="formQuestions">
+				<div className={`formQuestions ${this.state.transition}`}>
 					<h2>Do you have any special interest?</h2>
 					<div>
 						<input
@@ -615,7 +615,7 @@ class Form extends React.Component<{}, FormState> {
 	 */
 	previousQuestion() {
 		if (this.state.questionNumber == 1) {
-			alert('Nu blev det fel!');
+			// TODO: add error handling when pressing previous and there is no previous question
 		} else {
 			this.setState({
 				questionNumber: this.state.questionNumber - 1
@@ -656,7 +656,7 @@ class Form extends React.Component<{}, FormState> {
 
 			this.handleResult();
 
-		} // Checks if any radio button is checked in form is.
+		} // Checks if any radio button is checked in form.
 		else if (Array.from(inputs).some(input => input.checked == true)) {
 			localStorage.setItem('firstValue', firstValue);
 			localStorage.setItem('secondValue', secondValue);
@@ -671,8 +671,14 @@ class Form extends React.Component<{}, FormState> {
 			localStorage.setItem('eleventhValue', eleventhValue);
 
 			this.setState({
-				questionNumber: this.state.questionNumber + 1
-			});
+				transition: "fadeOut"
+			})
+			setTimeout(() => {
+				this.setState({
+					transition: "fadeIn",
+					questionNumber: this.state.questionNumber + 1
+				})
+			}, 500);
 		} else {
 			this.setState({
 				showEmptyInputWarning: true,
@@ -681,7 +687,7 @@ class Form extends React.Component<{}, FormState> {
 				this.setState({
 					showEmptyInputWarning: false
 				})
-			}, 4800);
+			}, 3800);
 		}
 	};
 
