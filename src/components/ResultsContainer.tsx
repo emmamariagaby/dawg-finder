@@ -12,13 +12,11 @@ export interface ResultsContainerProps {
 
 /** Renders ResultsContainer consisting of DogInfo-components. */
 class ResultsContainer extends React.Component<ResultsContainerProps, ResultsContainerState> {
-    state = {
-        source: []
-    }
-
-    constructor(props: ResultsContainerProps) {
-        super(props)
-        this.fetchResultsData();
+constructor(props: ResultsContainerProps) {
+        super(props);
+        this.state = {
+            source: []
+        }
     }
 
     render() {
