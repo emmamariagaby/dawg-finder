@@ -4,24 +4,25 @@ import Header from "../Header";
 import Container from "../Container";
 import Button from "../Button";
 import Footer from "../Footer";
-import ResultsContainer from '../ResultsContainer';
+import ErrorBoundary from '../ErrorBoundary';
 
 
 class Home extends React.Component {
-render() {
-    return(
-        <>
-        <Header />
-        <Container>
-        <ResultsContainer result="sällskapshund" />
-            <Button to='/form'>Form</Button>
-            <Button to='/dogscreen'>Dog Page</Button>
-        </Container>
-        <Footer />
-        </>
-    );
-}
-    
+    render() {
+        return (
+            <>
+                <Header />
+                <Container>
+                    <ErrorBoundary>
+                        <Button to='/form'>Form</Button>
+                        <Button to='/dogscreen'>Dog Page</Button>
+                    </ErrorBoundary>
+                </Container>
+                <Footer />
+            </>
+        );
+    }
+
 
 };
 

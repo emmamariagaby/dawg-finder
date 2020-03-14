@@ -5,24 +5,27 @@ import Container from "../Container";
 // import DogImages from "../DogImages";
 import Button from "../Button";
 import Footer from "../Footer";
+import ErrorBoundary from '../ErrorBoundary';
 
- /** 
- * 
- */
+/** 
+* 
+*/
 class DogScreen extends React.Component {
-render() {
-    return(
-        <>
-        <Header />
-        <Container>
-            {/* <DogImages /> */}
-             <Button to="/">Home</Button>
-        </Container>
-        <Footer />
-        </>
-    );
-}
-    
+    render() {
+        return (
+            <>
+                <Header />
+                <Container>
+                    <ErrorBoundary>
+                        {/* <DogImages /> */}
+                        <Button to="/">Home</Button>
+                    </ErrorBoundary>
+                </Container>
+                <Footer />
+            </>
+        );
+    }
+
 
 };
 
