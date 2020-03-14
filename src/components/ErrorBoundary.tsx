@@ -37,3 +37,5 @@ class ErrorBoundary extends React.Component<{}, ErrorBoundaryState> {
         console.log(error, errorInfo, errorInfo.componentStack);
     }
 }
+
+export default ErrorBoundary;

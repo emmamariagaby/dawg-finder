@@ -15,7 +15,7 @@ export interface DogInfoProps {
 /** Renders DogInfo consisting of DogImage and DogText. */
 class DogInfo extends React.Component<DogInfoProps, DogInfoState> {
   state = {
-    showText: true
+    showText: false
   }
 
   constructor(props: DogInfoProps) {
