@@ -33,15 +33,6 @@ class DogInfo extends React.Component<DogInfoProps, DogInfoState> {
   }
 
   /**
-   * Catches errors and logs in the console.
-   * @param error The error that occured.
-   * @param errorInfo Info on said error.
-   */
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.log(error, errorInfo)
-  }
-
-  /**
    * Conditionally sets showText state.
    */
   setShowTextState() {
