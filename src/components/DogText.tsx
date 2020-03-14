@@ -17,15 +17,6 @@ class DogText extends React.Component<DogTextProps, {}> {
         </div> : null
     );
   }
-
-  /**
-   * Catches errors and logs in the console.
-   * @param error The error that occured.
-   * @param errorInfo Info on said error.
-   */
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.log(error, errorInfo)
-  }
 }
 
 export default DogText;
