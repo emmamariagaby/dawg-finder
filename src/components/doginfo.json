@@ -3,368 +3,371 @@
         "PUG": {
             "info": "Pugs are happy and affectionate, loyal and charming",
             "images": [
-                "./src/assets/images/pug/pug1.jpg"
+                "./src/assets/images/pug/pug.jpg"
             ]
         },
         "POODLE": {
-            "info": "Poodles are alert and intelligent, Learning new commands and tricks aint nothing for a poodle",
+            "info": "Poodles are alert and intelligent, learning new commands and tricks aint nothing for a poodle",
             "images": [
-                "./src/assets/images/poodle/poodle1.jpg"
+                "./src/assets/images/poodle/poodle.jpg"
             ]
         },
         "BICHON FRISÉ": {
             "info": "Bichon frisé is a cheerful small dog with a lot of love to give",
             "images": [
-               ""
+                "./src/assets/images/bichonfrise/bichonfrise.jpg"
             ]
         },
         "FRENCH BULLDOG": {
             "info": "Frenchies are funny and stubborn, they love cuddles and making new friends",
             "images": [
-               ""
+                "./src/assets/images/frenchbulldog/frenchbulldog.jpg"
             ]
         },
         "CHIHUAHUA": {
             "info": "A chihuahua is a really small dog breed with a lot of confidence",
             "images": [
-               ""
+                "./src/assets/images/chihuahua/chihuahua.jpg"
             ]
         },
         "CAVALIER KING CHARLES SPANIEL": {
-            "info": "Cavaliers are easygoing, loving lap dogs who loves everybody they meets",
+            "info": "Cavaliers are easygoing, loving lap dogs who loves everybody they meet",
             "images": [
-               ""
+                "./src/assets/images/cavalier/cavalier.jpg"
             ]
         },
         "POMERANIAN": {
-            "info": "Pomeranians are the cute, outgoing and energetic, they are barkers with big personalities",
+            "info": "Pomeranians are cute, outgoing and energetic, they are barkers with big personalities",
             "images": [
-               ""
+                "./src/assets/images/pomeranian/pomeranian.jpg"
             ]
         },
-        "PEKINGESE": {
-            "info": "Pekingese have much charachter and charm",
+        "LHASA APSO": {
+            "info": "Lhasa apsos have much charachter and charm",
             "images": [
-               ""
+                "./src/assets/images/lhasaapso/lhasaapso.jpg"
             ]
         },
-        "PAPILLION": {
-            "info": "Papillion is happy alert and friendly",
+        "Phaléne": {
+            "info": "Phalénes are happy, alert and friendly",
             "images": [
-               ""
+                "./src/assets/images/phalene/phalene.jpg"
             ]
         },
         "CHINESE CRESTED DOG": {
             "info": "Chinese cresteds are for people who wants a really special little friend",
             "images": [
-               ""
+                "./src/assets/images/chinese/chinese.jpg"
             ]
         }
     }],
     "jakthund": [{
         "BEAGLE": {
-            "info": "The beagle have a nice temperament and are the best trackers",
+            "info": "The beagle have a nice temperament and is one of the best trackers",
             "images": [
-                "./src/assets/images/beagle/beagle1.jpg"
+                "./src/assets/images/beagle/beagle.jpg"
             ]
         },
         "LAKELAND TERRIER": {
             "info": "This breed is mischievous, loyal and sometimes really stubborn",
             "images": [
-                "./src/assets/images/lakelandterrier/lakelandterrier1.jpg"
+                "./src/assets/images/lakelandterrier/lakelandterrier.jpg"
             ]
         },
         "LABRADOR RETRIVER": {
             "info": "Labradors are warm and friendly, they love adventures and go for a swim",
             "images": [
-               ""
+                "./src/assets/images/labrador/labrador.jpg"
             ]
         },
         "GOLDEN RETRIEVER": {
-            "info": "Goldens are gentle loving dogs, they are loyal and happy to everybody",
+            "info": "Goldens are gentle loving dogs, they are loyal and happy towards everybody",
             "images": [
-               ""
+                "./src/assets/images/golden/golden.jpg"
             ]
         },
         "DACHSHUND": {
             "info": "Dachshunds has the biggest personalities, they for sure makes you laugh",
             "images": [
-               ""
+                "./src/assets/images/dach/dach.jpg"
             ]
         },
         "NOVA SCOTIA DUCK TOLLING RETRIEVER": {
             "info": "Tollers like to stay busy, they are smart and have a lot of energy",
             "images": [
-               ""
+                "./src/assets/images/toller/toller.jpg"
             ]
         },
         "BASSET HOUND": {
-            "info": "Bassets is are calm, patient and stubborn, these dogs have a serious sense of smell",
+            "info": "Bassets are calm, patient and stubborn, these dogs have a serious sense of smell",
             "images": [
-               ""
+                "./src/assets/images/basset/basset.jpg"
             ]
         },
         "WEIMARANER": {
-            "info": "Weimaraner is fearless, alert and obedient, and they are great companion for hiking",
+            "info": "Weimaraner are fearless, alert and obedient, and they are great companions for hiking",
             "images": [
-               ""
+                "./src/assets/images/weimaraner/weimaraner.jpg"
             ]
         },
         "POINTER": {
             "info": "Pointers are nice and loyal, they love to work and make you happy",
             "images": [
-               ""
+                "./src/assets/images/pointer/pointer.jpg"
             ]
         },
         "VIZSLA": {
-            "info": "Vizslas are lively, gentle and affectionate",
+            "info": "Vizslas are lively, gentle and affectionate, and they enjoy hard work",
             "images": [
-               ""
+                "./src/assets/images/vizsla/vizsla.jpg"
             ]
         }
     }],
     "vallhund": [{
         "BORDER COLLIE": {
-            "info": "Border collies are energetic, hardworking and smart. They wants to stay busy",
+            "info": "Border collies are energetic, hardworking and smart. They want to stay busy",
             "images": [
-                "./src/assets/images/bordercollie/bordercollie1.jpg"
+                "./src/assets/images/bordercollie/bordercollie.jpg"
             ]
         },
         "WELSH CORGI PEMBROKE": {
             "info": "Corgis are adorable little troublemakers with a lot of personality and happiness",
             "images": [
-                "./src/assets/images/corgi/corgi1.jpg"
+                "./src/assets/images/corgi/corgi.jpg"
             ]
         },
         "AUSTRALIAN SHEPHERD": {
             "info": "Aussies are highly intelligent, balanced and love training",
             "images": [
-               ""
+                "./src/assets/images/aussie/aussie.jpg"
             ]
         },
         "COLLIE": {
             "info": "Collies have a soft temperament and are sensitive and smart",
             "images": [
-               ""
+                "./src/assets/images/collie/collie.jpg"
             ]
         },
         "OLD ENGLISH SHEEPDOG": {
-            "info": "This dogs are polite with everybody, sharp and sometimes just a big fluffy goofball",
+            "info": "OES dogs are polite with everybody, sharp and sometimes just a big fluffy goofball",
             "images": [
-               ""
+                "./src/assets/images/oes/oes.jpg"
             ]
         },
-        "LANCASHIRE HEELER": {
-            "info": "The lancashire heeler is friendly, quick, smart, happy and loyal",
+        "AUSTRALIAN CATTLE DOG": {
+            "info": "The cattle dog is friendly, quick, smart, very serious and loyal",
             "images": [
-               ""
+                "./src/assets/images/cattledog/cattledog.jpg"
             ]
         },
         "PUMI": {
-            "info": "Pumis have a sharp and intelligent personality and are easy tro train",
+            "info": "Pumis have a sharp and intelligent personality, their ears are really unique",
             "images": [
-               ""
+                "./src/assets/images/pumi/pumi.jpg"
             ]
         },
         "SHETLAND SHEEPDOG": {
             "info": "Shelties are intensely loyal, gentle and sensitive. They are sweet and playful",
             "images": [
-               ""
+                "./src/assets/images/sheltie/sheltie.jpg"
             ]
         },
         "BELGIAN MALINOIS": {
             "info": "Malinoises are alert, highly trainable and protective",
             "images": [
-               ""
+                "./src/assets/images/malinois/malinois.jpg"
             ]
         },
         "BERGAMASCO": {
-            "info": "Bergamascos are proud and a excellent watchdog",
+            "info": "Bergamascos are proud and excellent watchdogs",
             "images": [
-               ""
+                "./src/assets/images/bergamasco/bergamasco.jpg"
             ]
         }
     }],
     "hundraser": [{
-                "PUG": {
-                    "info": "Pugs are happy and affectionate, loyal and charming",
-                    "images": [
-                        "./src/assets/images/pug/pug1.jpg"
-                    ]
-                },
-                "POODLE": {
-                    "info": "Poodles are alert and intelligent, Learning new commands and tricks aint nothing for a poodle",
-                    "images": [
-                        "./src/assets/images/poodle/poodle1.jpg"
-                    ]
-                },
-                "BICHON FRISÉ": {
-                    "info": "Bichon frisé is a cheerful small dog with a lot of love to give",
-                    "images": [
-                       ""
-                    ]
-                },
-                "FRENCH BULLDOG": {
-                    "info": "Frenchies are funny and stubborn, they love cuddles and making new friends",
-                    "images": [
-                       ""
-                    ]
-                },
-                "CHIHUAHUA": {
-                    "info": "A chihuahua is a really small dog breed with a lot of confidence",
-                    "images": [
-                       ""
-                    ]
-                },
-                "CAVALIER KING CHARLES SPANIEL": {
-                    "info": "Cavaliers are easygoing, loving lap dogs who loves everybody they meets",
-                    "images": [
-                       ""
-                    ]
-                },
-                "POMERANIAN": {
-                    "info": "Pomeranians are the cute, outgoing and energetic, they are barkers with big personalities",
-                    "images": [
-                       ""
-                    ]
-                },
-                "PEKINGESE": {
-                    "info": "Pekingese have much charachter and charm",
-                    "images": [
-                       ""
-                    ]
-                },
-                "PAPILLION": {
-                    "info": "Papillion is happy alert and friendly",
-                    "images": [
-                       ""
-                    ]
-                },
-                "CHINESE CRESTED DOG": {
-                    "info": "Chinese cresteds are for people who wants a really special little friend",
-                    "images": [
-                       ""
-                    ]
-                }
-            }],
-                "BEAGLE": {
-                    "info": "The beagle have a nice temperament and are the best trackers",
-                    "images": [
-                        "./src/assets/images/beagle/beagle1.jpg"
-                    ]
-                },
-                "LAKELAND TERRIER": {
-                    "info": "This breed is mischievous, loyal and sometimes really stubborn",
-                    "images": [
-                        "./src/assets/images/lakelandterrier/lakelandterrier1.jpg"
-                    ]
-                },
-                "LABRADOR RETRIVER": {
-                    "info": "Labradors are warm and friendly, they love adventures and go for a swim",
-                    "images": [
-                       ""
-                    ]
-                },
-                "GOLDEN RETRIEVER": {
-                    "info": "Goldens are gentle loving dogs, they are loyal and happy to everybody",
-                    "images": [
-                       ""
-                    ]
-                },
-                "DACHSHUND": {
-                    "info": "Dachshunds has the biggest personalities, they for sure makes you laugh",
-                    "images": [
-                       ""
-                    ]
-                },
-                "NOVA SCOTIA DUCK TOLLING RETRIEVER": {
-                    "info": "Tollers like to stay busy, they are smart and have a lot of energy",
-                    "images": [
-                       ""
-                    ]
-                },
-                "BASSET HOUND": {
-                    "info": "Bassets is are calm, patient and stubborn, these dogs have a serious sense of smell",
-                    "images": [
-                       ""
-                    ]
-                },
-                "WEIMARANER": {
-                    "info": "Weimaraner is fearless, alert and obedient, and they are great companion for hiking",
-                    "images": [
-                       ""
-                    ]
-                },
-                "POINTER": {
-                    "info": "Pointers are nice and loyal, they love to work and make you happy",
-                    "images": [
-                       ""
-                    ]
-                },
-                "VIZSLA": {
-                    "info": "Vizslas are lively, gentle and affectionate",
-                    "images": [
-                       ""
-                    ]
-                },
-                "BORDER COLLIE": {
-                    "info": "Border collies are energetic, hardworking and smart. They wants to stay busy",
-                    "images": [
-                        "./src/assets/images/bordercollie/bordercollie1.jpg"
-                    ]
-                },
-                "WELSH CORGI PEMBROKE": {
-                    "info": "Corgis are adorable little troublemakers with a lot of personality and happiness",
-                    "images": [
-                        "./src/assets/images/corgi/corgi1.jpg"
-                    ]
-                },
-                "AUSTRALIAN SHEPHERD": {
-                    "info": "Aussies are highly intelligent, balanced and love training",
-                    "images": [
-                       ""
-                    ]
-                },
-                "COLLIE": {
-                    "info": "Collies have a soft temperament and are sensitive and smart",
-                    "images": [
-                       ""
-                    ]
-                },
-                "OLD ENGLISH SHEEPDOG": {
-                    "info": "This dogs are polite with everybody, sharp and sometimes just a big fluffy goofball",
-                    "images": [
-                       ""
-                    ]
-                },
-                "LANCASHIRE HEELER": {
-                    "info": "The lancashire heeler is friendly, quick, smart, happy and loyal",
-                    "images": [
-                       ""
-                    ]
-                },
-                "PUMI": {
-                    "info": "Pumis have a sharp and intelligent personality and are easy tro train",
-                    "images": [
-                       ""
-                    ]
-                },
-                "SHETLAND SHEEPDOG": {
-                    "info": "Shelties are intensely loyal, gentle and sensitive. They are sweet and playful",
-                    "images": [
-                       ""
-                    ]
-                },
-                "BELGIAN MALINOIS": {
-                    "info": "Malinoises are alert, highly trainable and protective",
-                    "images": [
-                       ""
-                    ]
-                },
-                "BERGAMASCO": {
-                    "info": "Bergamascos are proud and a excellent watchdog",
-                    "images": [
-                       ""
-                    ]
-                }
+        "PUG": {
+            "info": "Pugs are happy and affectionate, loyal and charming",
+            "images": [
+                "./src/assets/images/pug/pug.jpg"
+            ]
+        },
+        "POODLE": {
+            "info": "Poodles are alert and intelligent, learning new commands and tricks aint nothing for a poodle",
+            "images": [
+                "./src/assets/images/poodle/poodle.jpg"
+            ]
+        },
+        "BICHON FRISÉ": {
+            "info": "Bichon frisé is a cheerful small dog with a lot of love to give",
+            "images": [
+                "./src/assets/images/bichonfrise/bichonfrise.jpg"
+            ]
+        },
+        "FRENCH BULLDOG": {
+            "info": "Frenchies are funny and stubborn, they love cuddles and making new friends",
+            "images": [
+                "./src/assets/images/frenchbulldog/frenchbulldog.jpg"
+            ]
+        },
+        "CHIHUAHUA": {
+            "info": "A chihuahua is a really small dog breed with a lot of confidence",
+            "images": [
+                "./src/assets/images/chihuahua/chihuahua.jpg"
+            ]
+        },
+        "CAVALIER KING CHARLES SPANIEL": {
+            "info": "Cavaliers are easygoing, loving lap dogs who loves everybody they meet",
+            "images": [
+                "./src/assets/images/cavalier/cavalier.jpg"
+            ]
+        },
+        "POMERANIAN": {
+            "info": "Pomeranians are cute, outgoing and energetic, they are barkers with big personalities",
+            "images": [
+                "./src/assets/images/pomeranian/pomeranian.jpg"
+            ]
+        },
+        "LHASA APSO": {
+            "info": "Lhasa apsos have much charachter and charm",
+            "images": [
+                "./src/assets/images/lhasaapso/lhasaapso.jpg"
+            ]
+        },
+        "Phaléne": {
+            "info": "Phalénes are happy, alert and friendly",
+            "images": [
+                "./src/assets/images/phalene/phalene.jpg"
+            ]
+        },
+        "CHINESE CRESTED DOG": {
+            "info": "Chinese cresteds are for people who wants a really special little friend",
+            "images": [
+                "./src/assets/images/chinese/chinese.jpg"
+            ]
+        },
+    "BEAGLE": {
+        "info": "The beagle have a nice temperament and is one of the best trackers",
+        "images": [
+            "./src/assets/images/beagle/beagle.jpg"
+        ]
+    },
+    "LAKELAND TERRIER": {
+        "info": "This breed is mischievous, loyal and sometimes really stubborn",
+        "images": [
+            "./src/assets/images/lakelandterrier/lakelandterrier.jpg"
+        ]
+    },
+    "LABRADOR RETRIVER": {
+        "info": "Labradors are warm and friendly, they love adventures and go for a swim",
+        "images": [
+            "./src/assets/images/labrador/labrador.jpg"
+        ]
+    },
+    "GOLDEN RETRIEVER": {
+        "info": "Goldens are gentle loving dogs, they are loyal and happy towards everybody",
+        "images": [
+            "./src/assets/images/golden/golden.jpg"
+        ]
+    },
+    "DACHSHUND": {
+        "info": "Dachshunds has the biggest personalities, they for sure makes you laugh",
+        "images": [
+            "./src/assets/images/dach/dach.jpg"
+        ]
+    },
+    "NOVA SCOTIA DUCK TOLLING RETRIEVER": {
+        "info": "Tollers like to stay busy, they are smart and have a lot of energy",
+        "images": [
+            "./src/assets/images/toller/toller.jpg"
+        ]
+    },
+    "BASSET HOUND": {
+        "info": "Bassets are calm, patient and stubborn, these dogs have a serious sense of smell",
+        "images": [
+            "./src/assets/images/basset/basset.jpg"
+        ]
+    },
+    "WEIMARANER": {
+        "info": "Weimaraner are fearless, alert and obedient, and they are great companions for hiking",
+        "images": [
+            "./src/assets/images/weimaraner/weimaraner.jpg"
+        ]
+    },
+    "POINTER": {
+        "info": "Pointers are nice and loyal, they love to work and make you happy",
+        "images": [
+            "./src/assets/images/pointer/pointer.jpg"
+        ]
+    },
+    "VIZSLA": {
+        "info": "Vizslas are lively, gentle and affectionate, and they enjoy hard work",
+        "images": [
+            "./src/assets/images/vizsla/vizsla.jpg"
+        ]
+    },
+    "BORDER COLLIE": {
+        "info": "Border collies are energetic, hardworking and smart. They want to stay busy",
+        "images": [
+            "./src/assets/images/bordercollie/bordercollie.jpg"
+        ]
+    },
+    "WELSH CORGI PEMBROKE": {
+        "info": "Corgis are adorable little troublemakers with a lot of personality and happiness",
+        "images": [
+            "./src/assets/images/corgi/corgi.jpg"
+        ]
+    },
+    "AUSTRALIAN SHEPHERD": {
+        "info": "Aussies are highly intelligent, balanced and love training",
+        "images": [
+            "./src/assets/images/aussie/aussie.jpg"
+        ]
+    },
+    "COLLIE": {
+        "info": "Collies have a soft temperament and are sensitive and smart",
+        "images": [
+            "./src/assets/images/collie/collie.jpg"
+        ]
+    },
+    "OLD ENGLISH SHEEPDOG": {
+        "info": "OES dogs are polite with everybody, sharp and sometimes just a big fluffy goofball",
+        "images": [
+            "./src/assets/images/oes/oes.jpg"
+        ]
+    },
+    "AUSTRALIAN CATTLE DOG": {
+        "info": "The cattle dog is friendly, quick, smart, very serious and loyal",
+        "images": [
+            "./src/assets/images/cattledog/cattledog.jpg"
+        ]
+    },
+    "PUMI": {
+        "info": "Pumis have a sharp and intelligent personality, their ears are really unique",
+        "images": [
+            "./src/assets/images/pumi/pumi.jpg"
+        ]
+    },
+    "SHETLAND SHEEPDOG": {
+        "info": "Shelties are intensely loyal, gentle and sensitive. They are sweet and playful",
+        "images": [
+            "./src/assets/images/sheltie/sheltie.jpg"
+        ]
+    },
+    "BELGIAN MALINOIS": {
+        "info": "Malinoises are alert, highly trainable and protective",
+        "images": [
+            "./src/assets/images/malinois/malinois.jpg"
+        ]
+    },
+    "BERGAMASCO": {
+        "info": "Bergamascos are proud and excellent watchdogs",
+        "images": [
+            "./src/assets/images/bergamasco/bergamasco.jpg"
+        ]
+    }
 }
+
+    
+
+
