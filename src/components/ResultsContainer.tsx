@@ -17,6 +17,7 @@ constructor(props: ResultsContainerProps) {
         this.state = {
             source: []
         }
+        this.fetchResultsData()
     }
 
     render() {
