@@ -40,7 +40,7 @@ ReactDOM.render(
               <Link to="/results">About</Link>
             </li>
             <li>
-              <Link to="/dogscreen">DogImages</Link>
+              <Link to="/dogscreen">DogPage</Link>
             </li>
             <li>
               <Link to="/footer">Users</Link>
