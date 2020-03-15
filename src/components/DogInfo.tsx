@@ -15,7 +15,7 @@ export interface DogInfoProps {
 /** Renders DogInfo consisting of DogImage and DogText. */
 class DogInfo extends React.Component<DogInfoProps, DogInfoState> {
   state = {
-    showText: true
+    showText: false
   }
 
   constructor(props: DogInfoProps) {
@@ -30,15 +30,6 @@ class DogInfo extends React.Component<DogInfoProps, DogInfoState> {
         <DogText dogType={this.props.dogType} showDogText={this.state.showText} source={this.props.source} />
       </div>
     );
-  }
-
-  /**
-   * Catches errors and logs in the console.
-   * @param error The error that occured.
-   * @param errorInfo Info on said error.
-   */
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.log(error, errorInfo)
   }
 
   /**

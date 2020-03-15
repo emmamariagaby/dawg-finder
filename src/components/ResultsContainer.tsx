@@ -12,13 +12,11 @@ export interface ResultsContainerProps {
 
 /** Renders ResultsContainer consisting of DogInfo-components. */
 class ResultsContainer extends React.Component<ResultsContainerProps, ResultsContainerState> {
-    state = {
-        source: []
-    }
-
-    constructor(props: ResultsContainerProps) {
-        super(props)
-        this.fetchResultsData();
+constructor(props: ResultsContainerProps) {
+        super(props);
+        this.state = {
+            source: []
+        }
     }
 
     render() {
@@ -30,15 +28,6 @@ class ResultsContainer extends React.Component<ResultsContainerProps, ResultsCon
                 })}
             </div>
         )
-    }
-
-    /**
-     * Catches errors and logs in the console.
-     * @param error The error that occured.
-     * @param errorInfo Info on said error.
-     */
-    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-        console.log(error, errorInfo)
     }
 
     /**
