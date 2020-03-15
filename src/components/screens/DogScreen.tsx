@@ -17,10 +17,8 @@ class DogScreen extends React.Component {
                 <Header />
                 <Container>
                     <ErrorBoundary>
-                        <div className="DogPage">
                         <ResultsContainer result="hundraser" />
                         <Button to="/">Home</Button>
-                        </div>
                     </ErrorBoundary>
                 </Container>
                 <Footer />
