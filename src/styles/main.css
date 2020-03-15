@@ -50,8 +50,8 @@ html, body {
     background-color: var(--lightblue);
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .screen {
@@ -220,25 +220,55 @@ label:after {
     100% { opacity: 0; }
 }
 
-
-
 .ResultsContainer {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    width: 100vw;
-}
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: space-between;
+    overflow: scroll;
+    background-color: white;
+}  
 
 .DogImage {
-    width: 19rem;
-    margin: .5rem;
+    display: grid;
+    width: 350px;
+    height: 320px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 14px 0px #000000(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer;
 }
 
-.DogImage.clicked {
+.ImageContainer {
+    position: relative; 
+  }
+
+  .ImageContainer:hover .overlayText {
+    opacity: 2;
+  }
+
+  .overlayText {
+    color: #55143C;
+    background-color: white;
+    border: dashed;
+    border-color: #55143C;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+ .DogImage.clicked {
     width: 22rem;
-}
+} 
 
-.footer {
+ .footer {
     height: 4rem;
     font-size: .7rem;
     bottom: 0;
@@ -246,4 +276,32 @@ label:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+} 
+
+.DogText {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    font-size: 15px;
+    margin: 20px;
+    color: blue;
+    
+}
+
+/* MOBILE */
+@media only screen and (max-width: 550px) {
+    .ResultsContainer {
+        display: grid;
+        grid-template-columns: 1;
+        grid-column: 1/1;
+    }
+} 
+
+/* TABLET */
+@media only screen and (max-width: 1200px) {
+    .ResultsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: space-between; 
+    }
 }

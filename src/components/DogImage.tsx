@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { DogInfoProps } from "./DogInfo";
+import { DogInfoProps } from "./DogInfo"
 
 export interface DogImageState {
   imageSource: string
@@ -25,7 +25,12 @@ class DogImage extends React.Component<DogImageProps, DogImageState> {
 
   render() {
     return (
-      <img src={this.state.imageSource} width="400px" height="auto" onClick={this.returnData} />
+      <div className="ImageContainer">
+      <img className="DogImage" src={this.state.imageSource} onClick={this.returnData} />
+      <div className="overlay">
+        <div className="overlayText">CURIOUS OF THIS DOG BREED?<br></br><br></br>CLICK ON IMAGE</div>
+      </div>
+    </div>
     );
   }
 
