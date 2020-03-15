@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import Header from "../Header";
 import Container from "../Container";
-// import DogImages from "../DogImages";
 import Button from "../Button";
 import Footer from "../Footer";
 import ErrorBoundary from '../ErrorBoundary';
+import ResultsContainer from '../ResultsContainer';
 
 /** 
 * 
@@ -17,8 +17,10 @@ class DogScreen extends React.Component {
                 <Header />
                 <Container>
                     <ErrorBoundary>
-                        {/* <DogImages /> */}
+                        <div className="DogPage">
+                        <ResultsContainer result="hundraser" />
                         <Button to="/">Home</Button>
+                        </div>
                     </ErrorBoundary>
                 </Container>
                 <Footer />
