@@ -288,15 +288,6 @@ label:after {
     
 }
 
-/* MOBILE */
-@media only screen and (max-width: 550px) {
-    .ResultsContainer {
-        display: grid;
-        grid-template-columns: 1;
-        grid-column: 1/1;
-    }
-} 
-
 /* TABLET */
 @media only screen and (max-width: 1200px) {
     .ResultsContainer {
@@ -305,3 +296,15 @@ label:after {
         align-items: space-between; 
     }
 }
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .ResultsContainer {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            }
+        } 
+    
