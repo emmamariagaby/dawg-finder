@@ -6,7 +6,6 @@ import Button from "../Button";
 import Footer from "../Footer";
 import ErrorBoundary from '../ErrorBoundary';
 
-
 class Home extends React.Component {
     render() {
         return (
