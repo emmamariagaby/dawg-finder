@@ -7,19 +7,23 @@ import Footer from "../Footer";
 
 
 class Home extends React.Component {
-render() {
-    return(
-        <>
-        <Header />
-        <Container>
-            <Button to='/form'>Form</Button>
-            <Button to='/dogscreen'>Dog Page</Button>
-        </Container>
-        <Footer />
-        </>
-    );
-}
-    
+    render() {
+        return (
+            <>
+                <Header />
+                <Container>
+                    <p>Looking for a dog friend?</p>
+                    <p>Take the test to find out which breed suits you best!</p>
+                    <div className="rowButtons">
+                        <Button to='/form'>Take me to the test!</Button>
+                        <Button to='/dogscreen'>Read about doggies</Button>
+                    </div>
+                </Container>
+                <Footer />
+            </>
+        );
+    }
+
 
 };
 
