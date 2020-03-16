@@ -19,11 +19,12 @@ const LinkButton = (props) => {
     staticContext,
     to,
     onClick,
+    className,
     // ⬆ filtering out props that `button` doesn’t know what to do with.
     ...rest
   } = props
   return (
-    <button
+    <button className={props.className}
       {...rest} // `children` is just another prop!
       onClick={(event) => {
         onClick && onClick(event)
