@@ -46,19 +46,63 @@ button:hover {
     background-color: var(--disabled);
 }
 
-nav {
-    display: flex;
-    flex-direction: column;
+nav img{
+    height: 2.5rem;
+    width: 2.5rem;
+    top: 0;
+    left: 0;
+    transition: .5s all ease;
 }
 
-nav > button {
-    color: var(--purple);
+nav img:active {
+    transform: rotate(45deg);
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: calc(2% + 1rem);
+    z-index: 4;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: column;
+    border-radius: .2rem;
+    width: 100%;
+    background-color: var(--greenblue);
+    padding: .5rem;
+}
+
+.MenuIcon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: calc(.5vw + .9rem);
+    padding: 1rem;
+    background-color: var(--white);
+}
+
+.MenuIcon > span {
+    padding: .2rem;
+    margin: .3rem;
+    font-weight: bold;
+}
+
+nav button {
+    color: black;
     text-align: left;
-    font-size: .8rem;
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: 900;
-    background-color: unset;
+    font-size: calc(.5vw + .8rem);
+    font-weight: 500;
+    padding: .5rem;
+    height: 3rem; width: unset;
+    margin: .2rem;
+    background-color: var(--white);
+    transition: all 300ms ease;
+}
+
+nav button:hover {
+    background-color: var(--lightblue);
 }
 
 html, body {

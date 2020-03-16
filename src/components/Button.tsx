@@ -23,7 +23,6 @@ const LinkButton = (props) => {
     // ⬆ filtering out props that `button` doesn’t know what to do with.
     ...rest
   } = props
-  console.log("mount", props.className)
   return (
     <button className={props.className}
       {...rest} // `children` is just another prop!

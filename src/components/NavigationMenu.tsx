@@ -1,7 +1,8 @@
 import React from "react";
 
 export interface NavigationMenuState {
-    showMenu: boolean
+    showMenu?: boolean;
+    transition: string;
 }
 
 export interface NavigationMenuProps {
@@ -12,41 +13,45 @@ class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenu
     constructor(props: NavigationMenuProps) {
         super(props);
         this.state = {
-            showMenu: false
+            showMenu: true,
+            transition: "fadeOut"
         }
     }
 
     render() {
         return (
-            <nav>
-                <Circle />
-                {this.state.showMenu ? this.props.children : null}
-            </nav>
+            <>
+                <MenuIcon />
+                {this.state.showMenu ?
+                    <div className={this.state.transition}>
+                        {this.props.children}
+                    </div> : null}
+            </>
         )
     }
 
     componentDidMount() {
-        document.getElementsByClassName("circle")[0].addEventListener("click", () => {
-            this.setState(currentState => ({
-                showMenu: !currentState.showMenu
-            }));
-        });
+        document.getElementsByClassName("MenuIcon")[0].addEventListener("click", this.handleClick);
     }
 
-    componentWillUnmount() {
-        document.getElementsByClassName("circle")[0].removeEventListener("click", () => {
-            this.setState(currentState => ({
-                showMenu: !currentState.showMenu
-            }));
-        });
+    handleClick = () => {
+        this.state.showMenu ?
+            (this.setState({ transition: "fadeOut" }),
+                setTimeout(() => {
+                    this.setState({
+                        showMenu: false
+                    })
+                }, 500)) : this.setState({ showMenu: true, transition: "fadeIn" })
     }
 }
 
-export const Circle = () => {
+export const MenuIcon = () => {
+    console.log(onclick)
     return (
-        <svg className="circle">
-            <ellipse ry="8" rx="8" id="svg_1" cy="10" cx="10" strokeWidth="1.5" stroke="#000" fill="#fff" />
-        </svg>
+        <span className="MenuIcon">
+            <img src="src/assets/icons/bone.svg" />
+            <span>Menu</span>
+        </span>
     )
 }
 
