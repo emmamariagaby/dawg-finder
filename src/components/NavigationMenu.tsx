@@ -30,10 +30,12 @@ class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenu
         )
     }
 
+    /** Add event listener to nav bar on mount. */
     componentDidMount() {
         document.getElementsByClassName("MenuIcon")[0].addEventListener("click", this.handleClick);
     }
 
+    /** Handles on click event and toggles classes to fade in/out menu links.  */
     handleClick = () => {
         this.state.showMenu ?
             (this.setState({ transition: "fadeOut" }),
@@ -45,6 +47,9 @@ class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenu
     }
 }
 
+/**
+ * Functional component only used here in NavigationMenu.
+ */
 export const MenuIcon = () => {
     return (
         <span className="MenuIcon">
