@@ -46,6 +46,21 @@ button:hover {
     background-color: var(--disabled);
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav > button {
+    color: var(--purple);
+    text-align: left;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    background-color: unset;
+}
+
 html, body {
     background-color: var(--lightblue);
     height: 100vh;
