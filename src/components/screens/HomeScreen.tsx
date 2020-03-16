@@ -13,8 +13,8 @@ class HomeScreen extends React.Component {
                 <Header />
                 <Container>
                     <ErrorBoundary>
-                        <Button to='/form'>Form</Button>
-                        <Button to='/dogscreen'>Dog Page</Button>
+                        <Button to='/find-your-dog'>Find your dog!</Button>
+                        <Button to='/dogs'>Dog breeds</Button>
                     </ErrorBoundary>
                 </Container>
                 <Footer />
