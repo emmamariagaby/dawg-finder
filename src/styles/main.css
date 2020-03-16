@@ -64,6 +64,7 @@ button:hover {
 .header img {
     height: 13rem;
 }
+
 .MenuIcon > img{
     height: 2.2rem;
     width: 2.2rem;
@@ -95,10 +96,21 @@ nav > div {
     border-radius: .5rem .5rem .5rem .5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     font-size: calc(.5vw + .9rem);
-    padding: 1rem .5rem 1rem 1.5rem;
+    padding: 1rem .5rem 1rem .5rem;
     background-color: var(--greenblue);
+}
+
+.closeIcon {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: .5rem auto;
+    cursor: pointer;
 }
 
 .MenuIcon > span {
@@ -431,6 +443,7 @@ label:after {
 @media only screen and (max-width: 460px) {
     nav {
         left: 1vh;
+        width: calc(25% + 3rem);
     }
 }
     

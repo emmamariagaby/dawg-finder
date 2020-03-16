@@ -13,7 +13,7 @@ class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenu
     constructor(props: NavigationMenuProps) {
         super(props);
         this.state = {
-            showMenu: true,
+            showMenu: false,
             transition: "fadeOut"
         }
     }
