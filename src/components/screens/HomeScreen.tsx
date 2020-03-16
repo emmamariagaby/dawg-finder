@@ -10,11 +10,15 @@ class HomeScreen extends React.Component {
     render() {
         return (
             <>
-                <Header />
-                <Container>
+                <Header cssClass="homeScreen" />
+                <Container cssClass="homeScreen">
+                    <p>Looking for a dog friend?</p>
+                    <p>Take the test to find out which breed suits you best!</p>
                     <ErrorBoundary>
-                        <Button to='/find-your-dog'>Find your dog!</Button>
-                        <Button to='/dogs'>Dog breeds</Button>
+                        <div className="rowButtons">
+                            <Button to='/find-your-dog'>Find your dog!</Button>
+                            <Button to='/dogs'>Dog breeds</Button>
+                        </div>
                     </ErrorBoundary>
                 </Container>
                 <Footer />
