@@ -48,10 +48,40 @@
                 "./src/assets/images/lhasaapso/lhasaapso.jpg"
             ]
         },
-        "Phaléne": {
+        "PHALÉNE": {
             "info": "Phalénes are happy, alert and friendly",
             "images": [
                 "./src/assets/images/phalene/phalene.jpg"
+            ]
+        },
+        "YORKSHIRETERRIER": {
+            "info": "Yorkies are bold, confident, and offering a big personality in a tiny package",
+            "images": [
+                "./src/assets/images/yorkie/yorkie.jpg"
+            ]
+        },
+        "SCHNAUZER": {
+            "info": "Behind mustache and chin strap you find the schnauzer",
+            "images": [
+                "./src/assets/images/schnauzer/schnauzer.jpg"
+            ]
+        },
+        "MALTESE": {
+            "info": "The sweet maltese is fearless, responsive and trusting",
+            "images": [
+                "./src/assets/images/malteser/malteser.jpg"
+            ]
+        },
+        "WEST HIGHLAND WHITE TERRIER": {
+            "info": "Westies are strong-willed, bold, and confident. But most of all just happy",
+            "images": [
+                "./src/assets/images/westie/westie.jpg"
+            ]
+        },
+        "BOSTON TERRIER": {
+            "info": "Known as a american gentle- male and bitch. Very alert and clownish",
+            "images": [
+                "./src/assets/images/bostonterrier/bostonterrier.jpg"
             ]
         },
         "CHINESE CRESTED DOG": {
@@ -116,6 +146,36 @@
                 "./src/assets/images/pointer/pointer.jpg"
             ]
         },
+        "STAFFORDSHIRE BULLTERRIER": {
+            "info": "Staffys are loving clowns, who love cuddles, people and children. They're called nanny dogs",
+            "images": [
+                "./src/assets/images/staffy/staffy.jpg"
+            ]
+        },
+        "BOXER": {
+            "info": "The boxer is quirky, loyal and will absolutely be your best friend",
+            "images": [
+                "./src/assets/images/boxer/boxer.jpg"
+            ]
+        },
+        "AMERICAN STAFFORDSHIRE TERRIER": {
+            "info": "The amstaff is gentle, playful and tolerant. They love snuggles in front of a movie",
+            "images": [
+                "./src/assets/images/amstaff/amstaff.jpg"
+            ]
+        },
+        "RHODESIAN RIDGEBACK": {
+            "info": "Ridgebacks are cool and they really have an eye and heart for family life",
+            "images": [
+                "./src/assets/images/ridgeback/ridgeback.jpg"
+            ]
+        },
+        "SHIBA INU": {
+            "info": "Shibas are quiet alert dogs, with much happiness and smiles",
+            "images": [
+                "./src/assets/images/shiba/shiba.jpg"
+            ]
+        },
         "VIZSLA": {
             "info": "Vizslas are lively, gentle and affectionate, and they enjoy hard work",
             "images": [
@@ -134,6 +194,36 @@
             "info": "Corgis are adorable little troublemakers with a lot of personality and happiness",
             "images": [
                 "./src/assets/images/corgi/corgi.jpg"
+            ]
+        },
+        "GERMAN SHEPHERD": {
+            "info": "This dog is the best, most loving guard dog you could have",
+            "images": [
+                "./src/assets/images/germanshepherd/germanshepherd.jpg"
+            ]
+        },
+        "DANISH-SWEDISH FARMDOG": {
+            "info": "Known as the little big dog, this dog loves to work and enjoys a challenge",
+            "images": [
+                "./src/assets/images/dsg/dsg.jpg"
+            ]
+        },
+        "SIBERIAN HUSKY": {
+            "info": "Huskies are athletic, playful and light on their feet. They love winter and running",
+            "images": [
+                "./src/assets/images/husky/husky.jpg"
+            ]
+        },
+        "IRISH WOLFHOUND": {
+            "info": "The irish wolfhound have the biggest heart, and they're noble, sensitive and easygoing",
+            "images": [
+                "./src/assets/images/irish/irish.jpg"
+            ]
+        },
+        "KELPIE": {
+            "info": "The kelpie is extremely alert and eager with a mild mind and loyality",
+            "images": [
+                "./src/assets/images/kelpie/kelpie.jpg"
             ]
         },
         "AUSTRALIAN SHEPHERD": {
@@ -234,10 +324,40 @@
                 "./src/assets/images/lhasaapso/lhasaapso.jpg"
             ]
         },
-        "Phaléne": {
+        "PHALÉNE": {
             "info": "Phalénes are happy, alert and friendly",
             "images": [
                 "./src/assets/images/phalene/phalene.jpg"
+            ]
+        },
+        "YORKSHIRETERRIER": {
+            "info": "Yorkies are bold, confident, and offering a big personality in a tiny package",
+            "images": [
+                "./src/assets/images/yorkie/yorkie.jpg"
+            ]
+        },
+        "SCHNAUZER": {
+            "info": "Behind mustache and chin strap you find the schnauzer",
+            "images": [
+                "./src/assets/images/schnauzer/schnauzer.jpg"
+            ]
+        },
+        "MALTESE": {
+            "info": "The sweet maltese is fearless, responsive and trusting",
+            "images": [
+                "./src/assets/images/malteser/malteser.jpg"
+            ]
+        },
+        "WEST HIGHLAND WHITE TERRIER": {
+            "info": "Westies are strong-willed, bold, and confident. But most of all just happy",
+            "images": [
+                "./src/assets/images/westie/westie.jpg"
+            ]
+        },
+        "BOSTON TERRIER": {
+            "info": "Known as a american gentle- male and bitch. Very alert and clownish",
+            "images": [
+                "./src/assets/images/bostonterrier/bostonterrier.jpg"
             ]
         },
         "CHINESE CRESTED DOG": {
@@ -300,6 +420,36 @@
             "./src/assets/images/pointer/pointer.jpg"
         ]
     },
+    "STAFFORDSHIRE BULLTERRIER": {
+        "info": "Staffys are loving clowns, who love cuddles, people and children. They're called nanny dogs",
+        "images": [
+            "./src/assets/images/staffy/staffy.jpg"
+        ]
+    },
+    "BOXER": {
+        "info": "The boxer is quirky, loyal and will absolutely be your best friend",
+        "images": [
+            "./src/assets/images/boxer/boxer.jpg"
+        ]
+    },
+    "AMERICAN STAFFORDSHIRE TERRIER": {
+        "info": "The amstaff is gentle, playful and tolerant. They love snuggles in front of a movie",
+        "images": [
+            "./src/assets/images/amstaff/amstaff.jpg"
+        ]
+    },
+    "RHODESIAN RIDGEBACK": {
+        "info": "Ridgebacks are cool and they really have an eye and heart for family life",
+        "images": [
+            "./src/assets/images/ridgeback/ridgeback.jpg"
+        ]
+    },
+    "SHIBA INU": {
+        "info": "Shibas are quiet alert dogs, with much happiness and smiles",
+        "images": [
+            "./src/assets/images/shiba/shiba.jpg"
+        ]
+    },
     "VIZSLA": {
         "info": "Vizslas are lively, gentle and affectionate, and they enjoy hard work",
         "images": [
@@ -316,6 +466,36 @@
         "info": "Corgis are adorable little troublemakers with a lot of personality and happiness",
         "images": [
             "./src/assets/images/corgi/corgi.jpg"
+        ]
+    },
+    "GERMAN SHEPHERD": {
+        "info": "This dog is the best, most loving guard dog you could have",
+        "images": [
+            "./src/assets/images/germanshepherd/germanshepherd.jpg"
+        ]
+    },
+    "DANISH-SWEDISH FARMDOG": {
+        "info": "Known as the little big dog, this dog loves to work and enjoys a challenge",
+        "images": [
+            "./src/assets/images/dsg/dsg.jpg"
+        ]
+    },
+    "SIBERIAN HUSKY": {
+        "info": "Huskies are athletic, playful and light on their feet. They love winter and running",
+        "images": [
+            "./src/assets/images/husky/husky.jpg"
+        ]
+    },
+    "IRISH WOLFHOUND": {
+        "info": "The irish wolfhound have the biggest heart, and they're noble, sensitive and easygoing",
+        "images": [
+            "./src/assets/images/irish/irish.jpg"
+        ]
+    },
+    "KELPIE": {
+        "info": "The kelpie is extremely alert and eager with a mild mind and loyality",
+        "images": [
+            "./src/assets/images/kelpie/kelpie.jpg"
         ]
     },
     "AUSTRALIAN SHEPHERD": {

@@ -6,7 +6,9 @@
     --disabled: #BCC3C4;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     outline: none;
     box-sizing: border-box;
     margin: 0;
@@ -43,16 +45,32 @@ button:hover {
     background-color: var(--purple);
 }
 
-.buttonDisabled, .buttonDisabled:hover {
+.buttonDisabled,
+.buttonDisabled:hover {
     background-color: var(--disabled);
 }
 
-html, body {
+.header {
+    width: 100%;
+    height: 12rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img {
+    height: 13rem;
+}
+
+html,
+body {
     background-color: var(--lightblue);
     height: 100vh;
     margin: 0;
-    overflow: hidden;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .screen {
@@ -99,7 +117,10 @@ h3 {
     font-size: 1.5rem;
     margin: 0;
 }
+
+
 /* FORM */
+
 form {
     word-wrap: break-word;
     width: 90%;
@@ -119,7 +140,7 @@ form {
     margin: .8rem;
 }
 
-.formQuestions > div {
+.formQuestions>div {
     min-width: 50%;
     max-width: 80%;
     margin: .5rem;
@@ -129,7 +150,7 @@ input[type="radio"] {
     display: none;
 }
 
-input[type="radio"]:checked + label:after {
+input[type="radio"]:checked+label:after {
     transform: scale(1);
 }
 
@@ -142,7 +163,8 @@ label {
     padding: .3rem;
 }
 
-label:before, label:after {
+label:before,
+label:after {
     position: absolute;
     content: '';
     border-radius: 50%;
@@ -150,7 +172,11 @@ label:before, label:after {
 }
 
 label:before {
-    background-color: var(--greenblue); left: -2rem; top: 0; width: 1.7rem; height: 1.7rem;
+    background-color: var(--greenblue);
+    left: -2rem;
+    top: 0;
+    width: 1.7rem;
+    height: 1.7rem;
 }
 
 label:after {
@@ -187,9 +213,10 @@ label:after {
     bottom: 1rem;
 }
 
-.errorPopup, .errorPopup > i {
+.errorPopup,
+.errorPopup>i {
     color: var(--white);
- }
+}
 
 .fadeInOut {
     opacity: 1;
@@ -205,34 +232,80 @@ label:after {
 }
 
 @keyframes fadeInOut {
-    0%   { opacity: 0; }
-    25%  { opacity: 1; }
-    80%  { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes fadeIn {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    0%   { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-
-
 .ResultsContainer {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: space-between;
+    overflow: scroll;
+    background-color: white;
 }
 
 .DogImage {
-    width: 19rem;
-    margin: .5rem;
+    display: grid;
+    width: 350px;
+    height: 320px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 14px 0px #000000(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.ImageContainer {
+    position: relative;
+}
+
+.ImageContainer:hover .overlayText {
+    opacity: 2;
+}
+
+.overlayText {
+    color: #55143C;
+    background-color: white;
+    border: dashed;
+    border-color: #55143C;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .DogImage.clicked {
@@ -247,4 +320,37 @@ label:after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.DogText {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    font-size: 15px;
+    margin: 20px;
+    color: blue;
+}
+
+
+/* TABLET */
+
+@media only screen and (max-width: 1200px) {
+    .ResultsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: space-between;
+    }
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 800px) {
+    .ResultsContainer {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
 }

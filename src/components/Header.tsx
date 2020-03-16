@@ -3,9 +3,9 @@ import * as React from "react";
 class Header extends React.Component {
     render() {
         return (
-            <h1>
-                Header
-            </h1>
+          <div className='header'>
+           <img src="mockups/logo/logga-dawg-finder-1.png" alt=""/>
+          </div>
         );
     }
 }
