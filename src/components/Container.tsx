@@ -5,7 +5,6 @@ import { HeaderProps } from "./Header";
 export interface ContainerState {
 	windowWidth: number;
 	windowHeight: number;
-	fadeOut: boolean;
 }
 
 export interface ContainerProps extends HeaderProps {
@@ -18,7 +17,6 @@ class Container extends React.Component<ContainerProps, ContainerState> {
 		this.state = {
 			windowWidth: 0,
 			windowHeight: 0,
-			fadeOut: false,
 		}
 
 		this.updateScreenSize = this.updateScreenSize.bind(this);
@@ -26,7 +24,7 @@ class Container extends React.Component<ContainerProps, ContainerState> {
 
 	render() {
 		return (
-			<div className={`container 
+			<div className={`container
 				${this.getClassName()} 
 				${this.props.cssClass ? this.props.cssClass : ""}`}>
 				{this.props.children}
@@ -69,9 +67,6 @@ class Container extends React.Component<ContainerProps, ContainerState> {
 	 * Fades out component and removes event listener on unmount.
 	 */
 	componentWillUnmount() {
-		this.setState({
-			fadeOut: true
-		})
 		window.removeEventListener("resize", this.updateScreenSize);
 	}
 }
