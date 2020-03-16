@@ -16,7 +16,7 @@ ReactDOM.render(
       <nav>
         <NavigationMenu>
           <Button to="/" className="fadeIn">Home</Button>
-          <Button to="/find-your-dog" className="fadeIn">Take the test</Button>
+          <Button to="/find-your-dog" className="fadeIn">Find your dog!</Button>
           <Button to="/dogs" className="fadeIn">More dog breeds</Button>
         </NavigationMenu>
       </nav>
