@@ -62,6 +62,7 @@ class Form extends React.Component<{}, FormState> {
 						: null}
 					<div className="rowButtons">
 						<button type="button" className={this.state.questionNumber == 1 ? "buttonDisabled" : ""} onClick={() => this.previousQuestion()}>Previous</button>
+						{this.props.children}
 						<button type="submit">Next</button>
 					</div>
 				</form>
