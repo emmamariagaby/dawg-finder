@@ -4,6 +4,8 @@
     --white: #F8F7F3;
     --purple: #55143C;
     --disabled: #BCC3C4;
+    --lightgrey: #3A3B3B;
+    --pastelpink: rgb(224, 154, 190);
 }
 
 *,
@@ -62,21 +64,18 @@ button:hover {
 .header img {
     height: 13rem;
 }
-nav img{
-    height: 2.5rem;
-    width: 2.5rem;
+.MenuIcon > img{
+    height: 2.2rem;
+    width: 2.2rem;
     top: 0;
     left: 0;
     transition: .5s all ease;
-}
-
-nav img:active {
-    transform: rotate(45deg);
+    animation: rotateBone 6s ease-in-out infinite;
 }
 
 nav {
     position: absolute;
-    top: 0;
+    top: 1vh;
     left: calc(2% + 1rem);
     width: 10rem;
     z-index: 4;
@@ -85,10 +84,11 @@ nav {
 nav > div {
     display: flex;
     flex-direction: column;
-    border-radius: .2rem;
+    border-radius: .5rem;
     width: 100%;
     background-color: var(--greenblue);
     padding: .5rem;
+    margin-top: -.7rem;
 }
 
 .MenuIcon {
@@ -97,18 +97,32 @@ nav > div {
     align-items: center;
     cursor: pointer;
     font-size: calc(.5vw + .9rem);
-    padding: 1rem;
-    background-color: var(--white);
+    padding: 1rem .5rem 1rem 1.5rem;
+    background-color: var(--greenblue);
 }
 
 .MenuIcon > span {
+    color: white;
     padding: .2rem;
     margin: .3rem;
-    font-weight: bold;
+}
+
+@keyframes rotateBone {
+    0%   { transform: rotate(0); }
+    10%  { transform: rotate(0); }
+    20%  { transform: rotate(30deg); }
+    28%  { transform: rotate(-10deg); }
+    35%  { transform: rotate(30deg); }
+    43%  { transform: rotate(-10deg); }
+    51%  { transform: rotate(15deg); }
+    60%  { transform: rotate(0); }
+    80%  { transform: rotate(0); }
+    90%  { transform: rotate(0); }
+    100% { transform: rotate(0); }
 }
 
 nav button {
-    color: black;
+    color: var(--lightgrey);
     text-align: left;
     font-size: 1rem;
     font-weight: 500;
@@ -120,7 +134,7 @@ nav button {
 }
 
 nav button:hover {
-    background-color: var(--lightblue);
+    background-color: var(--pastelpink);
 }
 
 html, body {
@@ -146,10 +160,10 @@ html, body {
     border-radius: 1rem;
     width: 32rem;
     height: 100%;
+    display: flex;
     flex: 1;
     padding: .5rem;
     margin: 0 auto;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -371,7 +385,7 @@ label:after {
 }
 
 .footer {
-    height: 4rem;
+    height: 3rem;
     font-size: .7rem;
     bottom: 0;
     display: flex;
@@ -416,8 +430,7 @@ label:after {
 /* MOBILE SMALL */
 @media only screen and (max-width: 460px) {
     nav {
-        top: 0;
-        left: 0;
+        left: 1vh;
     }
 }
     

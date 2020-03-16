@@ -46,7 +46,6 @@ class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenu
 }
 
 export const MenuIcon = () => {
-    console.log(onclick)
     return (
         <span className="MenuIcon">
             <img src="src/assets/icons/bone.svg" />
