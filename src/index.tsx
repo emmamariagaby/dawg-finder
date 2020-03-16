@@ -11,7 +11,7 @@ ReactDOM.render(
  
     <Router>
       <div className="screen">
-        <nav>
+        {/* <nav>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -23,7 +23,7 @@ ReactDOM.render(
               <Link to="/dogs">More dog breeds</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
