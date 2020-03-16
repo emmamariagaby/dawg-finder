@@ -1,8 +1,9 @@
 import * as React from 'react';
 
 import ResultsContainer from "./ResultsContainer";
+import { NavigationMenuState } from './NavigationMenu';
 
-export interface FormState {
+export interface FormState extends NavigationMenuState {
 	questionNumber: number;
 	firstValue: string;
 	secondValue: string;
@@ -15,7 +16,6 @@ export interface FormState {
 	ninthValue: string;
 	tenthValue: string;
 	eleventhValue: string;
-	transition: string;
 	isFormFinished: boolean;
 	formResult: string;
 	showEmptyInputWarning: boolean;
