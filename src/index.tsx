@@ -1,28 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { BrowserRouter as Router, BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Header from "./components/Header";
-import Home from "./components/screens/Home";
+import HomeScreen from "./components/screens/HomeScreen";
 import FormScreen from "./components/screens/FormScreen";
-
-import ResultScreen from "./components/screens/ResultScreen";
 import DogScreen from "./components/screens/DogScreen";
-
-import Footer from "./components/Footer";
-import ResultRouter from "./ResultRouter";
-import Option from "./components/Option";
-
-import Form from "./components/Form";
-import Button from "./components/Button";
-import Container from "./components/Container";
-import ResultsContainer from "./components/ResultsContainer";
-
-import "./styles/main.css"
-// import ResultsContainer from "./components/ResultsContainer";
-// import {FormRender} from "./components/Form";
-
 
 ReactDOM.render(
  
@@ -34,16 +17,10 @@ ReactDOM.render(
               <Link to="/">Home</Link>
             </li>
              <li>
-              <Link to="/form">Form</Link>
+              <Link to="/find-your-dog">Find your dog!</Link>
             </li>
             <li>
-              <Link to="/results">About</Link>
-            </li>
-            <li>
-              <Link to="/dogscreen">DogPage</Link>
-            </li>
-            <li>
-              <Link to="/footer">Users</Link>
+              <Link to="/dogs">More dog breeds</Link>
             </li>
           </ul>
         </nav>
@@ -51,20 +28,14 @@ ReactDOM.render(
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-           <Route path="/form">
+           <Route path="/find-your-dog">
             <FormScreen />
           </Route>
-          <Route path="/results">
-            <ResultScreen />
-          </Route>
-          <Route path="/dogscreen">
+          <Route path="/dogs">
             <DogScreen />
           </Route>
-          <Route path="/footer">
-            <Footer />
-          </Route>
            <Route path="/">
-            <Home />
+            <HomeScreen />
           </Route>
         </Switch>
       </div>
