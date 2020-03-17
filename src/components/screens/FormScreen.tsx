@@ -15,11 +15,12 @@ class FormScreen extends React.Component {
     render() {
         return (
             <>
-                <Header />
+                <Header cssClass="formScreen" />
                 <Container>
                     <ErrorBoundary>
-                        <Form />
-                        <Button to="/">Home</Button>
+                        <Form>
+                            <Button className="secondaryButton" to="/">Home</Button>
+                        </Form>
                     </ErrorBoundary>
                 </Container>
                 <Footer />
