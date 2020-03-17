@@ -68,7 +68,7 @@ button:hover {
     align-items: center;
 }
 
-.header.formScreen > img {
+.header.formScreen > img, .header.dogScreen > img {
     width: auto;
     height: 100%;
     margin: 0;
@@ -96,7 +96,11 @@ button:hover {
     height: 4rem;
 }
 
-.homeScreen > img, .formScreen img {
+.dogScreen {
+    margin-top: 0;
+}
+
+.homeScreen > img, .otherScreen img, .dogScreen img {
     margin-top: 12rem;
     height: calc(34% + 15rem);
     z-index: 2;
