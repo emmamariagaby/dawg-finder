@@ -25,7 +25,6 @@ constructor(props: ResultsContainerProps) {
             <div className="FullScreen">
             <div className="ResultsContainer">
                 {this.state.source.map((value, index) => {
-                    console.log(value)
                     return <DogInfo key={index} dogType={this.props.result} source={value} />
                 })}
             </div>

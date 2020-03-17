@@ -574,7 +574,6 @@ class Form extends React.Component<{}, FormState> {
 		} else if (C > A && C > B) {
 			this.answersC();
 		} else {
-			console.log("alla hundar passar dig")
 			this.answersABC();
 		}
 	}
@@ -583,28 +582,24 @@ class Form extends React.Component<{}, FormState> {
    	 * Functions for showing result
    	 */
 	answersA() {
-		console.log("En sällskapshunds skulle passa dig");
 		this.setState({
 			formResult: "sällskapshund"
 		});
 	}
 
 	answersB() {
-		console.log("En jakthund skulle passa dig");
 		this.setState({
 			formResult: "jakthund"
 		});
 	}
 
 	answersC() {
-		console.log("En vallhund skulle passa dig");
 		this.setState({
 			formResult: "vallhund"
 		});
 	}
 
 	answersABC() {
-		console.log("Alla hundraser passar dig");
 		this.setState({
 			formResult: "hundraser"
 		});

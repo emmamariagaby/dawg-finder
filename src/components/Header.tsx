@@ -6,7 +6,6 @@ export interface HeaderProps {
 
 class Header extends React.Component<HeaderProps, {}> {
 	render() {
-		console.log(this.props.cssClass)
 		return (
 			<div className={`header 
 		  		${this.props.cssClass != undefined ? this.props.cssClass : ""}`}>
