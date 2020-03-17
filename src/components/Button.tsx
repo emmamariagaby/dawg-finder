@@ -2,14 +2,9 @@ import * as React from "react";
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 
-// class Button extends React.Component {
-//     render() {
-//         return (
-//           <button> Button </button>
-        
-//         );
-//     }
-// }
+/*
+Holding all buttons related to router 
+*/ 
 
 const LinkButton = (props) => {
   const {
@@ -20,12 +15,11 @@ const LinkButton = (props) => {
     to,
     onClick,
     className,
-    // ⬆ filtering out props that `button` doesn’t know what to do with.
     ...rest
   } = props
   return (
     <button className={props.className}
-      {...rest} // `children` is just another prop!
+      {...rest} 
       onClick={(event) => {
         onClick && onClick(event)
         history.push(to)

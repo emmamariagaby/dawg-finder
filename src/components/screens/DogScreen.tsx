@@ -7,8 +7,8 @@ import Footer from "../Footer";
 import ErrorBoundary from '../ErrorBoundary';
 import ResultsContainer from '../ResultsContainer';
 
-/** 
-* 
+/*
+DogScreen is holding and showing all dog breeds
 */
 class DogScreen extends React.Component {
     render() {

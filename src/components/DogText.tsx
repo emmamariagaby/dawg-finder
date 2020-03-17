@@ -6,7 +6,7 @@ export interface DogTextProps extends DogInfoProps {
   showDogText: boolean
 }
 
-/** Renders DogText consisting of title and parapgraph. */
+/** Renders DogText consisting of title and paragraph. */
 class DogText extends React.Component<DogTextProps, {}> {
   render() {
     return (

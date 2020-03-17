@@ -6,6 +6,10 @@ import Button from "../Button";
 import Footer from "../Footer";
 import ErrorBoundary from '../ErrorBoundary';
 
+/*
+First page for webapp
+ */
+
 class HomeScreen extends React.Component {
     render() {
         return (

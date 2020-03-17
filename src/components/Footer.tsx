@@ -2,6 +2,8 @@ import * as React from "react";
 
 import "../styles/main.css"
 
+// footer with project info
+
 class Footer extends React.Component {
     render() {
         return (

@@ -7,9 +7,8 @@ import Button from "../Button";
 import Footer from "../Footer";
 import ErrorBoundary from '../ErrorBoundary';
 
-/** 
-* 
-*
+/*
+FormScreen is holding everything related to form
 */
 class FormScreen extends React.Component {
     render() {

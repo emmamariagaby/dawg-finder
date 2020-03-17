@@ -4,6 +4,8 @@ export interface HeaderProps {
 	cssClass?: string;
 }
 
+// Renders header
+
 class Header extends React.Component<HeaderProps, {}> {
 	render() {
 		return (

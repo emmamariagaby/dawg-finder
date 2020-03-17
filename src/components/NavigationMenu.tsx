@@ -9,6 +9,8 @@ export interface NavigationMenuProps {
     children: React.ReactNode;
 }
 
+// Web app menu 
+
 class NavigationMenu extends React.Component<NavigationMenuProps, NavigationMenuState> {
     constructor(props: NavigationMenuProps) {
         super(props);

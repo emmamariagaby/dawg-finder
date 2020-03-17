@@ -21,6 +21,8 @@ export interface FormState extends NavigationMenuState {
 	showEmptyInputWarning: boolean;
 }
 
+// Handles form with questions, input, and renders result
+
 class Form extends React.Component<{}, FormState> {
 	constructor(props?: any) {
 		super(props);

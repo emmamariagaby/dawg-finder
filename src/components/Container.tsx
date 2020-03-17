@@ -2,6 +2,10 @@ import * as React from "react";
 
 import { HeaderProps } from "./Header";
 
+/*
+Main container for layout
+*/
+
 export interface ContainerState {
 	windowWidth: number;
 	windowHeight: number;
