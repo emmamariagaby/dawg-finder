@@ -139,3 +139,6 @@ https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 
 ** DEMO **
 https://emmamariagaby.github.io/dawg-finder/
+
+** REPO **
+https://github.com/emmamariagaby/dawg-finder
