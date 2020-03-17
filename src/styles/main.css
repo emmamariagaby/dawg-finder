@@ -19,6 +19,14 @@
     color: black;
 }
 
+.FullScreen {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #32A3AA;
+    overflow: scroll;
+}
+
 a {
     text-decoration: none;
     font-weight: 700;
@@ -59,6 +67,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
 .header img {
@@ -349,18 +358,22 @@ label:after {
 }
 
 .ResultsContainer {
+    top: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: space-between;
     overflow: scroll;
     background-color: white;
+    margin-bottom: 150px;
+    height: 90%;
+    
 }
 
 .DogImage {
     display: grid;
     width: 350px;
     height: 320px;
-    margin: 20px;
+    margin: 50px;
     border-radius: 20px;
     box-shadow: 0px 6px 14px 0px #000000(0, 0, 0, 0.3);
     object-fit: cover;
@@ -373,6 +386,10 @@ label:after {
 
 .ImageContainer:hover .overlayText {
     opacity: 2;
+}
+
+.DogInfo {
+    padding-bottom: 50px;
 }
 
 .overlayText {
@@ -407,12 +424,17 @@ label:after {
 }
 
 .DogText {
-    display: grid;
-    grid-template-columns: auto;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    
+}
+
+.DogText > p, .DogText > h3 {
     font-size: 15px;
-    margin: 20px;
-    color: blue;
+    color: #55143C;
+    width: 70%;
 }
 
 
