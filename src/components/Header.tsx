@@ -10,7 +10,7 @@ class Header extends React.Component<HeaderProps, {}> {
 		return (
 			<div className={`header 
 		  		${this.props.cssClass != undefined ? this.props.cssClass : ""}`}>
-				<img src="mockups/logo/logga-dawg-finder-1.png"
+				<img src="mockups/logo/Header-Dawg-2.png"
 					alt="Logo with page title and illustration of a dog" />
 			</div>
 		);

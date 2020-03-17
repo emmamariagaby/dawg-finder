@@ -78,7 +78,8 @@ button:hover {
     z-index: 3;
 }
 
-.header.formScreen > img, .header.dogScreen > img {
+.header.formScreen>img,
+.header.dogScreen>img {
     width: auto;
     height: 100%;
     margin: 0;
@@ -89,14 +90,14 @@ button:hover {
     border: none;
 }
 
-.homeScreen > p {
+.homeScreen>p {
     width: 80%;
     text-align: center;
     margin: 0 2rem;
     font-size: calc(.5vw + 1.2rem);
 }
 
-.homeScreen > .rowButtons {
+.homeScreen>.rowButtons {
     margin: 3rem 0 -7rem 0;
 }
 
@@ -110,14 +111,16 @@ button:hover {
     margin-top: 0;
 }
 
-.homeScreen > img, .otherScreen img, .dogScreen img {
+.homeScreen>img,
+.otherScreen img,
+.dogScreen img {
     margin-top: 12rem;
-    height: calc(34% + 15rem);
+    height: calc(33% + 14rem);
     z-index: 2;
-    margin-left: 1.5rem;
+    margin-left: 0.9rem;
 }
 
-.MenuIcon > img{
+.MenuIcon>img {
     height: 2.2rem;
     width: 2.2rem;
     top: 0;
@@ -134,7 +137,7 @@ nav {
     z-index: 4;
 }
 
-nav > div {
+nav>div {
     display: flex;
     flex-direction: column;
     border-radius: .5rem;
@@ -165,24 +168,46 @@ nav > div {
     cursor: pointer;
 }
 
-.MenuIcon > span {
+.MenuIcon>span {
     color: white;
     padding: .2rem;
     margin: .3rem;
 }
 
 @keyframes rotateBone {
-    0%   { transform: rotate(0); }
-    10%  { transform: rotate(0); }
-    20%  { transform: rotate(30deg); }
-    28%  { transform: rotate(-10deg); }
-    35%  { transform: rotate(30deg); }
-    43%  { transform: rotate(-10deg); }
-    51%  { transform: rotate(15deg); }
-    60%  { transform: rotate(0); }
-    80%  { transform: rotate(0); }
-    90%  { transform: rotate(0); }
-    100% { transform: rotate(0); }
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(30deg);
+    }
+    28% {
+        transform: rotate(-10deg);
+    }
+    35% {
+        transform: rotate(30deg);
+    }
+    43% {
+        transform: rotate(-10deg);
+    }
+    51% {
+        transform: rotate(15deg);
+    }
+    60% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 nav button {
@@ -191,7 +216,8 @@ nav button {
     font-size: 1rem;
     font-weight: 500;
     padding: .5rem;
-    height: 3rem; width: unset;
+    height: 3rem;
+    width: unset;
     margin: .2rem;
     background-color: var(--white);
     transition: all 300ms ease;
@@ -201,7 +227,8 @@ nav button:hover {
     background-color: var(--lightblue);
 }
 
-html, body {
+html,
+body {
     background-color: var(--lightblue);
     height: 100vh;
     margin: 0;
@@ -509,17 +536,17 @@ label:after {
     }
 }
 
+
 /* MOBILE SMALL */
+
 @media only screen and (max-width: 460px) {
     nav {
         left: 1vh;
         width: calc(25% + 3rem);
     }
-
     .homeScreen img {
         min-width: 17rem;
         max-width: 20rem;
         height: auto;
     }
 }
-    
