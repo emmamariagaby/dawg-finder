@@ -14,7 +14,7 @@ class DogScreen extends React.Component {
     render() {
         return (
             <>
-                <Header />
+                <Header cssClass="dogScreen" />
                 <Container>
                     <ErrorBoundary>
                         <ResultsContainer result="hundraser" />
