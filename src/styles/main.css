@@ -107,9 +107,6 @@ button:hover {
     height: 4rem;
 }
 
-.dogScreen {
-    margin-top: 0;
-}
 
 .homeScreen>img,
 .otherScreen img,
@@ -466,10 +463,9 @@ label:after {
 }
 
 .overlayText {
-    color: #55143C;
-    background-color: white;
-    border: dashed;
-    border-color: #55143C;
+    color: var(--lightgrey);
+    background-color: rgba(255, 255, 255, 0.8);
+    
     font-size: 20px;
     font-weight: bolder;
     position: absolute;
@@ -497,25 +493,32 @@ label:after {
 }
 
 .DogText {
-    margin-top: 0;
     background-color: var(--white);
-    border-radius: 1rem;
+    padding: 1rem -1rem;
+    position: relative;
+    top: 5px;
+    border-radius: 2rem;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
+    padding: 1rem;
     flex-direction: column;
+    color: var(--lightgrey);
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
     
 }
 
 .DogText > p, .DogText > h3 {
     font-size: 15px;
-    color: #55143C;
+    color: var(--lightgrey);
     width: 70%;
 }
 
 
 /* TABLET */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1400px) {
     .ResultsContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
