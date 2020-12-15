@@ -1,28 +1,39 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Option from "./components/Option";
-import Form from "./components/Form";
+import HomeScreen from "./components/screens/HomeScreen";
+import FormScreen from "./components/screens/FormScreen";
+import DogScreen from "./components/screens/DogScreen";
+import NavigationMenu from "./components/NavigationMenu";
+
 import Button from "./components/Button";
-import Container from "./components/Container";
-import DogText from "./components/DogText";
-import DogInfo from "./components/DogInfo";
-import DogImage from "./components/DogImage";
-
-
 
 ReactDOM.render(
-    <>
-    <Header/>
-    <Option/>
-    <Form/>
-    <Button/>
-    <Container/>
-    <DogText/>
-    <DogInfo/>
-    <DogImage/>
-    <Footer/></>,
-    document.getElementById("root")
+
+  <Router>
+    <div className="screen">
+      <nav>
+        <NavigationMenu>
+          <Button to="/" className="fadeIn">Home</Button>
+          <Button to="/find-your-dog" className="fadeIn">Find your dog!</Button>
+          <Button to="/dogs" className="fadeIn">More dog breeds</Button>
+        </NavigationMenu>
+      </nav>
+
+      <Switch>
+        <Route path="/find-your-dog">
+          <FormScreen />
+        </Route>
+        <Route path="/dogs">
+          <DogScreen />
+        </Route>
+        <Route path="/">
+          <HomeScreen />
+        </Route>
+      </Switch>
+    </div>
+  </Router>,
+
+  document.getElementById("root")
 );

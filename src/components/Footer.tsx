@@ -1,11 +1,15 @@
 import * as React from "react";
 
+import "../styles/main.css"
+
+// footer with project info
+
 class Footer extends React.Component {
     render() {
         return (
-            <div>
+            <div className="footer">
                 <p>
-                    Repository <a href="https://github.com/emmamariagaby/dawg-finder">[link]</a>
+                    Repository <a href="https://github.com/emmamariagaby/dawg-finder">link</a>. Icons made by Freepik @ flaticon.com.
                 </p>
                 <p>
                     Created by <a href="https://github.com/AVLarsson">AVLarsson</a>
