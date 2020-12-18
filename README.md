@@ -138,6 +138,8 @@ REACT WEBPACK AND TYPESCRIPT GUIDE
 https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 
 ****************************************************************************
+RUN PROJECT
+Open index.html in your web browser
 
 ** REPO **
 https://github.com/emmamariagaby/dawg-finder
