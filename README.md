@@ -138,7 +138,7 @@ REACT WEBPACK AND TYPESCRIPT GUIDE
 https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
 
 ****************************************************************************
-RUN PROJECT
+** RUN PROJECT **
 Open index.html in your web browser
 
 ** REPO **
