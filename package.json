@@ -2,10 +2,10 @@
     "name": "dawg-finder",
     "version": "1.0.0",
     "homepage": "https://emmamariagaby.github.io/dawg-finder/",
-    "description": "",
     "main": "index.js",
+    "description": "Answer a questionnarie to find out your perfect dog breed match.",
     "scripts": {
-        "start": "ts-node ./src/index.tsx",
+        "start": "node index.tsx",
         "app": "npm-run-all --parallel build-watch live-server",
         "build-watch": "webpack-cli --watch",
         "build": "webpack-cli",
